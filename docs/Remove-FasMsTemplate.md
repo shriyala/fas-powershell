@@ -11,11 +11,12 @@ Uninstall a Microsoft Certificate Template from an Active Directory environment.
 This commandlet can be used to delete Microsoft Certificate Templates currently installed in an Active Directory Deployment. If the template is currently published on a Certificate Authority, running this command will unpublish it. Microsoft Certificate Authority uses Certificate Templates to describe the types of certificates that it can issue. This includes information such as the validity period and how the certificate should be authorized. Note that this cmdlet must be run using a High Privilege user account. Equivalent configuration can be done manually using the Microsoft GUI tools.
 
 ## Related Commands
--  [New-FasMsTemplate](New-FasMsTemplate.md) 
 
--  [Get-FasMsTemplate](Get-FasMsTemplate.md) 
+-  [New-FasMsTemplate](New-FasMsTemplate.md)
 
--  [Publish-FasMsTemplate](Publish-FasMsTemplate.md) 
+-  [Get-FasMsTemplate](Get-FasMsTemplate.md)
+
+-  [Publish-FasMsTemplate](Publish-FasMsTemplate.md)
 
 -  [Unpublish-FasMsTemplate](Unpublish-FasMsTemplate.md)
 

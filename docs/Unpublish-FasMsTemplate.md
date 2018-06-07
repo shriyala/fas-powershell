@@ -12,7 +12,7 @@ This command instructs a Microsoft Certificate Authority to stop publishing a Mi
 
 ## Related Commands
 
--  [Publish-FasMsTemplate](Publish-FasMsTemplate.md) 
+-  [Publish-FasMsTemplate](Publish-FasMsTemplate.md)
 
 -  [Get-FasMsCertificateAuthority](Get-FasMsCertificateAuthority.md)
 

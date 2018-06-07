@@ -12,7 +12,7 @@ This command deletes a FAS Authorization Certificate and associated private key.
 
 ## Related Commands
 
--  [New-FasAuthorizationCertificate](New-FasAuthorizationCertificate.md) 
+-  [New-FasAuthorizationCertificate](New-FasAuthorizationCertificate.md)
 
 -  [Get-FasAuthorizationCertificate](Get-FasAuthorizationCertificate.md)
 

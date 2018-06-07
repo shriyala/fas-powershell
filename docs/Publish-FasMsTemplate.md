@@ -12,7 +12,7 @@ This commandlet authorizes a Microsoft Certificate Authority to issue certificat
 
 ## Related Commands
 
--  [Unpublish-FasMsTemplate](Unpublish-FasMsTemplate.md) 
+-  [Unpublish-FasMsTemplate](Unpublish-FasMsTemplate.md)
 
 -  [Get-FasMsCertificateAuthority](Get-FasMsCertificateAuthority.md)
 

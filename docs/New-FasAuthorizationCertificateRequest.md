@@ -12,9 +12,9 @@ Generate an offline certificate request a Registration Authority (or Enrollment 
 
 ## Related Commands
 
--  [Import-FasAuthorizationCertificateResponse](Import-FasAuthorizationCertificateResponse.md) 
+-  [Import-FasAuthorizationCertificateResponse](Import-FasAuthorizationCertificateResponse.md)
 
--  [Get-FasAuthorizationCertificate](Get-FasAuthorizationCertificate.md) 
+-  [Get-FasAuthorizationCertificate](Get-FasAuthorizationCertificate.md)
 
 -  [Remove-FasAuthorizationCertificate](Remove-FasAuthorizationCertificate.md)
 

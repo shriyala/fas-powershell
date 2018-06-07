@@ -12,11 +12,11 @@ This commandlet lists information about the Microsoft Certificate Templates curr
 
 ## Related Commands
 
--  [New-FasMsTemplate](New-FasMsTemplate.md) 
+-  [New-FasMsTemplate](New-FasMsTemplate.md)
 
--  [Publish-FasMsTemplate](Publish-FasMsTemplate.md) 
+-  [Publish-FasMsTemplate](Publish-FasMsTemplate.md)
 
--  [Unpublish-FasMsTemplate](Unpublish-FasMsTemplate.md) 
+-  [Unpublish-FasMsTemplate](Unpublish-FasMsTemplate.md)
 
 -  [Remove-FasMsTemplate](Remove-FasMsTemplate.md)
 

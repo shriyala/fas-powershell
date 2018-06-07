@@ -12,7 +12,7 @@ This command creates a certificate for a user on the Federated Authentication Se
 
 ## Related Commands
 
--  [Get-FasUserCertificate](Get-FasUserCertificate.md) 
+-  [Get-FasUserCertificate](Get-FasUserCertificate.md)
 
 -  [Remove-FasUserCertificate](Remove-FasUserCertificate.md)
 

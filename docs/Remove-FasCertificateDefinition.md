@@ -12,9 +12,9 @@ Delete a Certificate Definition Object. The FAS server will no longer be able to
 
 ## Related Commands
 
--  [New-FasCertificateDefinition](New-FasCertificateDefinition.md) 
+-  [New-FasCertificateDefinition](New-FasCertificateDefinition.md)
 
--  [Set-FasCertificateDefinition](Set-FasCertificateDefinition.md) 
+-  [Set-FasCertificateDefinition](Set-FasCertificateDefinition.md)
 
 -  [Remove-FasCertificateDefinition](Remove-FasCertificateDefinition.md)
 

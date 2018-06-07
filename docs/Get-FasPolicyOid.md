@@ -12,9 +12,9 @@ This commandlet retrieves information about the Issuance Policy Oids registered 
 
 ## Related Commands
 
--  [New-FasPolicyOid](New-FasPolicyOid.md) 
+-  [New-FasPolicyOid](New-FasPolicyOid.md)
 
--  [Set-FasPolicyOid](Set-FasPolicyOid.md) 
+-  [Set-FasPolicyOid](Set-FasPolicyOid.md)
 
 -  [Remove-FasPolicyOid](Remove-FasPolicyOid.md)
 

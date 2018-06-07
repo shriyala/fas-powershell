@@ -12,9 +12,9 @@ Import a PKCS7 certificate chain containing the RA certificate issued by a certi
 
 ## Related Commands
 
--  [New-FasAuthorizationCertificateRequest](New-FasAuthorizationCertificateRequest.md) 
+-  [New-FasAuthorizationCertificateRequest](New-FasAuthorizationCertificateRequest.md)
 
--  [Get-FasAuthorizationCertificate](Get-FasAuthorizationCertificate.md) 
+-  [Get-FasAuthorizationCertificate](Get-FasAuthorizationCertificate.md)
 
 -  [Remove-FasAuthorizationCertificate](Remove-FasAuthorizationCertificate.md)
 

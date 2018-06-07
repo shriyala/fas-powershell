@@ -12,7 +12,7 @@ This command lists the certificates and private keys managed by the Federated Au
 
 ## Related Commands
 
--  [New-FasUserCertificate](New-FasUserCertificate.md) 
+-  [New-FasUserCertificate](New-FasUserCertificate.md)
 
 -  [Remove-FasUserCertificate](Remove-FasUserCertificate.md)
 

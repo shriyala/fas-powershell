@@ -12,9 +12,9 @@ This cmdlet registers a new Issuance Policy Oid with the domain by name, optiona
 
 ## Related Commands
 
--  [Get-FasPolicyOid](Get-FasPolicyOid.md) 
+-  [Get-FasPolicyOid](Get-FasPolicyOid.md)
 
--  [Set-FasPolicyOid](Set-FasPolicyOid.md) 
+-  [Set-FasPolicyOid](Set-FasPolicyOid.md)
 
 -  [Remove-FasPolicyOid](Remove-FasPolicyOid.md)
 
