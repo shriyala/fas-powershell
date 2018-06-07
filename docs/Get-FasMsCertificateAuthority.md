@@ -12,7 +12,7 @@ This commandlet retrieves information about the Microsoft Certificate Authoritie
 
 ## Related Commands
 
--  [Publish-FasMsTemplate](Publish-FasMsTemplate.md) 
+-  [Publish-FasMsTemplate](Publish-FasMsTemplate.md)
 
 -  [Unpublish-FasMsTemplate](Unpublish-FasMsTemplate.md)
 

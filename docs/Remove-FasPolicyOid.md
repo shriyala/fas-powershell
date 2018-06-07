@@ -12,9 +12,9 @@ This cmdlet removes an existing Issuance Policy Oid registered in the domain. No
 
 ## Related Commands
 
--  [New-FasPolicyOid](New-FasPolicyOid.md) 
+-  [New-FasPolicyOid](New-FasPolicyOid.md)
 
--  [Get-FasPolicyOid](Get-FasPolicyOid.md) 
+-  [Get-FasPolicyOid](Get-FasPolicyOid.md)
 
 -  [Set-FasPolicyOid](Set-FasPolicyOid.md)
 

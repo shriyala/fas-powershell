@@ -12,11 +12,11 @@ Loads a certificate template XML file and installs it to Active Directory, optio
 
 ## Related Commands
 
--  [Get-FasMsTemplate](Get-FasMsTemplate.md) 
+-  [Get-FasMsTemplate](Get-FasMsTemplate.md)
 
--  [Publish-FasMsTemplate](Publish-FasMsTemplate.md) 
+-  [Publish-FasMsTemplate](Publish-FasMsTemplate.md)
 
--  [Unpublish-FasMsTemplate](Unpublish-FasMsTemplate.md) 
+-  [Unpublish-FasMsTemplate](Unpublish-FasMsTemplate.md)
 
 -  [Remove-FasMsTemplate](Remove-FasMsTemplate.md)
 

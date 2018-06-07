@@ -12,13 +12,13 @@ Request a Registration Authority (or Enrollment Agent) certificate for a Federat
 
 ## Related Commands
 
--  [New-FasAuthorizationCertificateRequest](New-FasAuthorizationCertificateRequest.md) 
+-  [New-FasAuthorizationCertificateRequest](New-FasAuthorizationCertificateRequest.md)
 
--  [Get-FasAuthorizationCertificate](Get-FasAuthorizationCertificate.md) 
+-  [Get-FasAuthorizationCertificate](Get-FasAuthorizationCertificate.md)
 
--  [Remove-FasAuthorizationCertificate](Remove-FasAuthorizationCertificate.md) 
+-  [Remove-FasAuthorizationCertificate](Remove-FasAuthorizationCertificate.md)
 
--  [Get-FasMsTemplate](Get-FasMsTemplate.md) 
+-  [Get-FasMsTemplate](Get-FasMsTemplate.md)
 
 -  [Get-FasMsCertificateAuthority](Get-FasMsCertificateAuthority.md)
 

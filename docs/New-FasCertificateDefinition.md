@@ -9,6 +9,7 @@ Create a Certificate Definition object (recipe for issuing a certificate).
 ## Detailed Description
 
 Create a Certificate Definition object that the FAS will use to generate types of certificate. When generating a certificate, the FAS requires various pieces of information. Including:
+
 -  The CertificateTemplate to request (see Get-FasMsTemplate)
 -  A list of loadbalanced/failover Certificate Authority Addresses (see Get-FasMsCertificateAuthority)
 -  A reference to the AuthorizationCertificate to use to Authorize the request (see Get-FasAuthorizationCertificate)
@@ -17,17 +18,17 @@ Create a Certificate Definition object that the FAS will use to generate types o
 
 ## Related Commands
 
--  [Get-FasCertificateDefinition](Get-FasCertificateDefinition.md) 
+-  [Get-FasCertificateDefinition](Get-FasCertificateDefinition.md)
 
--  [Set-FasCertificateDefinition](Set-FasCertificateDefinition.md) 
+-  [Set-FasCertificateDefinition](Set-FasCertificateDefinition.md)
 
--  [Remove-FasCertificateDefinition](Remove-FasCertificateDefinition.md) 
+-  [Remove-FasCertificateDefinition](Remove-FasCertificateDefinition.md)
 
--  [Get-FasAuthorizationCertificate](Get-FasAuthorizationCertificate.md) 
+-  [Get-FasAuthorizationCertificate](Get-FasAuthorizationCertificate.md)
 
--  [Get-FasPolicy](Get-FasPolicy.md) 
+-  [Get-FasPolicy](Get-FasPolicy.md)
 
--  [Get-FasMsTemplate](Get-FasMsTemplate.md) 
+-  [Get-FasMsTemplate](Get-FasMsTemplate.md)
 
 -  [Get-FasMsCertificateAuthority](Get-FasMsCertificateAuthority.md)
 

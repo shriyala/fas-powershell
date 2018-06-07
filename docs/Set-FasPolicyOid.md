@@ -12,9 +12,9 @@ This cmdlet modifies the security group associated with a new Issuance Policy Oi
 
 ## Related Commands
 
--  [New-FasPolicyOid](New-FasPolicyOid.md) 
+-  [New-FasPolicyOid](New-FasPolicyOid.md)
 
--  [Get-FasPolicyOid](Get-FasPolicyOid.md) 
+-  [Get-FasPolicyOid](Get-FasPolicyOid.md)
 
 -  [Remove-FasPolicyOid](Remove-FasPolicyOid.md)
 

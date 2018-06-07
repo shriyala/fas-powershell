@@ -9,6 +9,7 @@ List or view existing Certificate Definition objects (recipe for issuing a certi
 ## Detailed Description
 
 View the configuration of existing Certificate Definition objects that the FAS is using to generate certificates. When generating a certificate, the FAS requires various pieces of information. Including:
+
 -  The CertificateTemplate to request (see Get-FasMsTemplate)
 -  A list of loadbalanced/failover Certificate Authority Addresses (see Get-FasMsCertificateAuthority)
 -  A reference to the AuthorizationCertificate to use to Authorize the request (see Get-FasAuthorizationCertificate)
@@ -17,9 +18,9 @@ View the configuration of existing Certificate Definition objects that the FAS i
 
 ## Related Commands
 
--  [New-FasCertificateDefinition](New-FasCertificateDefinition.md) 
+-  [New-FasCertificateDefinition](New-FasCertificateDefinition.md)
 
--  [Set-FasCertificateDefinition](Set-FasCertificateDefinition.md) 
+-  [Set-FasCertificateDefinition](Set-FasCertificateDefinition.md)
 
 -  [Remove-FasCertificateDefinition](Remove-FasCertificateDefinition.md)
 

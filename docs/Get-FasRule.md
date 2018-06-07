@@ -16,9 +16,7 @@ Retrieve the configuration of existing rules configured on a FAS server. Normall
 
 -  A reference to the Virtual Smart Card to use for log on. By default this is the first in the list of Certificate Definitions.
 
--  A list of Windows Accounts that are trusted to assert identities for this Rule. For security reasons, this must be chosen very carefully
-
--  usually it will be the explicit machine accounts of your StoreFront servers.
+-  A list of Windows Accounts that are trusted to assert identities for this Rule. For security reasons, this must be chosen very carefully: usually it will be the explicit machine accounts of your StoreFront servers.
 
 -  A list of Windows User Accounts that can be asserted. Usually this will be restricted to a security group. For example "ExternalCitrixUserGroup"
 
@@ -28,9 +26,8 @@ Retrieve the configuration of existing rules configured on a FAS server. Normall
 
 ## Related Commands
 
-
--  [New-FasRule](New-FasRule.md) 
--  [Set-FasRule](Set-FasRule.md) 
+-  [New-FasRule](New-FasRule.md)
+-  [Set-FasRule](Set-FasRule.md)
 -  [Remove-FasRule](Remove-FasRule.md)
 
 ## Parameters

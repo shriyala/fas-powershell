@@ -9,6 +9,7 @@ Delete a rule configured on the FAS server.
 ## Detailed Description
 
 Delete a rule configured on the FAS server. The rule will no longer be available to issue certificates. Normally to log in to a Windows computer the Active Directory Domain Controllers require that "primary credentials" be present
+
 -  that is a password, or a smartcard, etc. An instance of a Federated Authentication Service allows trusted servers to "assert" user identities without knowledge of primary credentials. The configuration options are:
 -  The name of the Rule or Service instance. Usually there will be at least one service named "default", but further, independent services can be run.
 -  A reference to the certificate definitions used to issue Virtual Smart Card certificates when user identities are asserted. Note that only Certificate Definitions marked "InSession" can be used after the logon stage.
@@ -21,9 +22,9 @@ Delete a rule configured on the FAS server. The rule will no longer be available
 
 ## Related Commands
 
--  [New-FasRule](New-FasRule.md) 
+-  [New-FasRule](New-FasRule.md)
 
--  [Set-FasRule](Set-FasRule.md) 
+-  [Set-FasRule](Set-FasRule.md)
 
 -  [Get-FasRule](Get-FasRule.md)
 

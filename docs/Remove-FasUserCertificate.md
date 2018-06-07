@@ -12,7 +12,7 @@ This command deletes certificates and private keys managed by the Federated Auth
 
 ## Related Commands
 
--  [New-FasUserCertificate](New-FasUserCertificate.md) 
+-  [New-FasUserCertificate](New-FasUserCertificate.md)
 
 -  [Get-FasUserCertificate](Get-FasUserCertificate.md)
 

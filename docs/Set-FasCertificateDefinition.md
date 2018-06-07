@@ -9,6 +9,7 @@ Modify an existing Certificate Definition object (recipe for issuing a certifica
 ## Detailed Description
 
 Change the confiration of an existing Certificate Definition object that the FAS is using to generate certificates. When generating a certificate, the FAS requires various pieces of information. Including:
+
 -  The CertificateTemplate to request (see Get-FasMsTemplate)
 -  A list of loadbalanced/failover Certificate Authority Addresses (see Get-FasMsCertificateAuthority)
 -  A reference to the AuthorizationCertificate to use to Authorize the request (see Get-FasAuthorizationCertificate)
@@ -17,9 +18,9 @@ Change the confiration of an existing Certificate Definition object that the FAS
 
 ## Related Commands
 
--  [New-FasCertificateDefinition](New-FasCertificateDefinition.md) 
+-  [New-FasCertificateDefinition](New-FasCertificateDefinition.md)
 
--  [Get-FasCertificateDefinition](Get-FasCertificateDefinition.md) 
+-  [Get-FasCertificateDefinition](Get-FasCertificateDefinition.md)
 
 -  [Remove-FasCertificateDefinition](Remove-FasCertificateDefinition.md)
 
