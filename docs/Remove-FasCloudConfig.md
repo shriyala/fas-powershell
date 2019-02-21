@@ -1,18 +1,16 @@
-# Set-FasServer
+# Remove-FasCloudConfig
 
 ## Synopsis
-Set information on a Federated Authentication Service (FAS) server.
+Removes the Federated Authentication Service (FAS) Cloud configuration.
 
 ## Syntax
 
 ```
-Set-FasServer [-MaintenanceMode <Boolean>] [-Address <String>] [-UserName <String>] [-Password <String>]
- [<CommonParameters>]
+Remove-FasCloudConfig [-Address <String>] [-UserName <String>] [-Password <String>] [<CommonParameters>]
 ```
 
 ## Description
-This cmdlet can modify information about a Federated Authentication Service (FAS) servers. 
-In particular, this can enable/disable Maintenance mode making the Fas Server rejects new connections (callers will fail over to different FAS servers).
+This cmdlet removes the Federated Authentication Service (FAS) Cloud configuration.
 
 ## Examples
 
@@ -20,35 +18,20 @@ In particular, this can enable/disable Maintenance mode making the Fas Server re
 PS C:\\\>
 
 ```
-C:\PS> $CitrixFasAddress = (Get-FasServer)[0].Address
-C:\PS> Set-FasServer -MaintenanceMode $FALSE
+C:\PS> $CitrixFasAddress=(Get-FasServer)[0].Address
+C:\PS> Remove-FasCloudConfig
 ```
 
 Description
 
 -----------
 
-This code lists the FAS Servers configured via Group Policy.
+This code sets removes the FAS cloud configuration.
 
 ## Parameters
 
-### -MaintenanceMode
-Set the MaintenanceMode flag
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: (default)
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Address
-Address of FAS Server (or $NULL to use $CitrixFasAddress)
+Specify a particular FAS server to contact (or $NULL to use $CitrixFasAddress)
 
 ```yaml
 Type: String
@@ -57,7 +40,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: $CitrixFasAddress
+Default value: $NULL
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
@@ -104,9 +87,16 @@ This cmdlet does accept input from the pipeline but only by property name.
 ## Outputs
 
 ### void
-This cmdlet returns a list of FAS server objects
+This cmdlet returns nothing
 
 ## Notes
 
 ## Related Links
+
+[Get-FasCloudConfig]()
+
+[Set-FasCloudConfig]()
+
+[New-FasCloudConfig]()
+
 
