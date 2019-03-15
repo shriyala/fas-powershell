@@ -1,416 +1,230 @@
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js" lang="en">
-  <!--<![endif]-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Import-FasAuthorizationCertificateResponse - Citrix Federated Authentication Service 1903 PowerShell cmdlets</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
-    <title>Import-FasAuthorizationCertificateResponse - Citrix Federated Authentication Service 1903 PowerShell cmdlets</title>
-     
-    <link rel="shortcut icon" href="
-https://www.citrix.com/etc/designs/citrix/icon-favicon.png"> 
-    <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
 
-    <link rel="stylesheet" href="../css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
-    <link rel="stylesheet" href="../css/highlight.css">
-    <link rel="stylesheet" href="../css/override.css" type="text/css" />
-    <link rel="stylesheet" href="../css/font-awesome.css" type="text/css" /> 
-    <script>
-      // Current page data
-      var mkdocs_page_name = "Import-FasAuthorizationCertificateResponse";
-      var mkdocs_page_input_path = "Import-FasAuthorizationCertificateResponse.md";
-      var mkdocs_page_url = "/Import-FasAuthorizationCertificateResponse/";
+    <body>
 
-    </script>
-    
-    <script src="../js/jquery-2.1.1.min.js"></script>
-    <script src="../js/modernizr-2.8.3.min.js"></script>
-    <script type="text/javascript" src="../js/highlight.pack.js"></script>
-    <script src="../js/theme.js"></script>
-    <script src="../js/custom.js"></script>  
-  </head>
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
 
-  <body class="wy-body-for-nav" role="document">
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="..">Citrix Federated Authentication Service 1903 PowerShell cmdlets</a>
+                </div>
 
-    <div class="header-top">
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Citrix Federated Authentication Service PowerShell cmdlets <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="..">Introduction</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">cmdlets reference <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../Get-FasAdministrationPolicy/">Get-FasAdministrationPolicy</a>
+</li>
+                                    
+<li >
+    <a href="../Get-FasAuthorizationCertificate/">Get-FasAuthorizationCertificate</a>
+</li>
+                                    
+<li >
+    <a href="../Get-FasCertificateDefinition/">Get-FasCertificateDefinition</a>
+</li>
+                                    
+<li >
+    <a href="../Get-FasMsCertificateAuthority/">Get-FasMsCertificateAuthority</a>
+</li>
+                                    
+<li >
+    <a href="../Get-FasMsTemplate/">Get-FasMsTemplate</a>
+</li>
+                                    
+<li >
+    <a href="../Get-FasPolicyOid/">Get-FasPolicyOid</a>
+</li>
+                                    
+<li >
+    <a href="../Get-FasRule/">Get-FasRule</a>
+</li>
+                                    
+<li >
+    <a href="../Get-FasServer/">Get-FasServer</a>
+</li>
+                                    
+<li >
+    <a href="../Get-FasServerForUser/">Get-FasServerForUser</a>
+</li>
+                                    
+<li >
+    <a href="../Get-FasUserCertificate/">Get-FasUserCertificate</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">Import-FasAuthorizationCertificateResponse</a>
+</li>
+                                    
+<li >
+    <a href="../New-FasAuthorizationCertificate/">New-FasAuthorizationCertificate</a>
+</li>
+                                    
+<li >
+    <a href="../New-FasAuthorizationCertificateRequest/">New-FasAuthorizationCertificateRequest</a>
+</li>
+                                    
+<li >
+    <a href="../New-FasCertificateDefinition/">New-FasCertificateDefinition</a>
+</li>
+                                    
+<li >
+    <a href="../New-FasMsTemplate/">New-FasMsTemplate</a>
+</li>
+                                    
+<li >
+    <a href="../New-FasPolicyOid/">New-FasPolicyOid</a>
+</li>
+                                    
+<li >
+    <a href="../New-FasRule/">New-FasRule</a>
+</li>
+                                    
+<li >
+    <a href="../New-FasUserCertificate/">New-FasUserCertificate</a>
+</li>
+                                    
+<li >
+    <a href="../Publish-FasMsTemplate/">Publish-FasMsTemplate</a>
+</li>
+                                    
+<li >
+    <a href="../Remove-FasAuthorizationCertificate/">Remove-FasAuthorizationCertificate</a>
+</li>
+                                    
+<li >
+    <a href="../Remove-FasCertificateDefinition/">Remove-FasCertificateDefinition</a>
+</li>
+                                    
+<li >
+    <a href="../Remove-FasMsTemplate/">Remove-FasMsTemplate</a>
+</li>
+                                    
+<li >
+    <a href="../Remove-FasPolicyOid/">Remove-FasPolicyOid</a>
+</li>
+                                    
+<li >
+    <a href="../Remove-FasRule/">Remove-FasRule</a>
+</li>
+                                    
+<li >
+    <a href="../Remove-FasUserCertificate/">Remove-FasUserCertificate</a>
+</li>
+                                    
+<li >
+    <a href="../Set-FasAdministrationPolicy/">Set-FasAdministrationPolicy</a>
+</li>
+                                    
+<li >
+    <a href="../Set-FasCertificateDefinition/">Set-FasCertificateDefinition</a>
+</li>
+                                    
+<li >
+    <a href="../Set-FasPolicyOid/">Set-FasPolicyOid</a>
+</li>
+                                    
+<li >
+    <a href="../Set-FasRule/">Set-FasRule</a>
+</li>
+                                    
+<li >
+    <a href="../Set-FasServer/">Set-FasServer</a>
+</li>
+                                    
+<li >
+    <a href="../Unpublish-FasMsTemplate/">Unpublish-FasMsTemplate</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
 
-        <div class="header-top-left">
-          <a href="http://developer-docs.citrix.com" class="logo-position"><img height="60" src="../img/citrixlogoblack.png" target="_blank" class="logo-citrix"><span style="color:#000;font-size: 20px;position: relative;top:4px;left:20px;">Developer Documentation</span></a>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../Get-FasUserCertificate/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../New-FasAuthorizationCertificate/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="header-top-right">
-          <ul>
 
-            <form id="rtd-search-form-alt" class="wy-form" action="../search.html" method="get">
-             <ul class="header-elements">
-              <li class="list-inline support">
-                <input name="q" id="txtName" type="text" placeholder="Search SDKs" class="searchdocs">
-                <a class="fa fa-search errspan"></a>
-<!---
-              </li>
-             <li> <a href="javascript:void(0);" style="font-size: 22px;position: relative;left: -10px;top: 3px"><i class="fa fa-globe"></i></a></li>
-             </ul>
-             --->
-            </form>
-
-          </ul>
-
-        </div>
-
-    </div>
-    <div class="body">
-      <div class="wy-grid-for-nav">
-
-        
-        <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-          <div class="wy-side-nav-search">
-            <div role="search">
-  <form id ="rtd-search-form-alt" class="wy-form" action="../search.html" method="get">
-	<i class="fa fa-search"></i>
-    <input type="text" name="q" placeholder="Search docs" />
-  </form>
-</div>
-          </div>
-
-          <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-            <ul class="current">
-              
-              
-    <li><span style="font-size: 16px;padding-left: 0px;">Citrix Federated Authentication Service PowerShell cmdlets <i class="faexp fa fa-angle-down" aria-hidden="true"></i></span></li>
-    <ul class="subnav" style="margin-left: 0px;padding-left:15px;border-left: 1px solid #b2b2b2;">
-        
-            
-    <li class="toctree-l1 ">
-        <a class="toctree-l1-a " href="..">Introduction</a>
-		
-    </li>
-
-        
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#import-fasauthorizationcertificateresponse">Import-FasAuthorizationCertificateResponse</a></li>
+            <li><a href="#synopsis">Synopsis</a></li>
+            <li><a href="#syntax">Syntax</a></li>
+            <li><a href="#description">Description</a></li>
+            <li><a href="#examples">Examples</a></li>
+            <li><a href="#parameters">Parameters</a></li>
+            <li><a href="#inputs">Inputs</a></li>
+            <li><a href="#outputs">Outputs</a></li>
+            <li><a href="#notes">Notes</a></li>
+            <li><a href="#related-links">Related Links</a></li>
     </ul>
+</div></div>
+                <div class="col-md-9" role="main">
 
-			  
-              
-    <li><span style="font-size: 16px;padding-left: 0px;">cmdlets reference <i class="faexp fa fa-angle-down" aria-hidden="true"></i></span></li>
-    <ul class="subnav" style="margin-left: 0px;padding-left:15px;border-left: 1px solid #b2b2b2;">
-        
-            
-    <li class="toctree-l1 ">
-        <a class="toctree-l1-a " href="../Get-FasAdministrationPolicy/">Get-FasAdministrationPolicy</a>
-		
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="toctree-l1-a " href="../Get-FasAuthorizationCertificate/">Get-FasAuthorizationCertificate</a>
-		
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="toctree-l1-a " href="../Get-FasCertificateDefinition/">Get-FasCertificateDefinition</a>
-		
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="toctree-l1-a " href="../Get-FasCloudConfig/">Get-FasCloudConfig</a>
-		
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="toctree-l1-a " href="../Get-FasMsCertificateAuthority/">Get-FasMsCertificateAuthority</a>
-		
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="toctree-l1-a " href="../Get-FasMsTemplate/">Get-FasMsTemplate</a>
-		
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="toctree-l1-a " href="../Get-FasPolicyOid/">Get-FasPolicyOid</a>
-		
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="toctree-l1-a " href="../Get-FasRule/">Get-FasRule</a>
-		
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="toctree-l1-a " href="../Get-FasServer/">Get-FasServer</a>
-		
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="toctree-l1-a " href="../Get-FasServerForUser/">Get-FasServerForUser</a>
-		
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="toctree-l1-a " href="../Get-FasUserCertificate/">Get-FasUserCertificate</a>
-		
-    </li>
-
-        
-            
-    <li class="toctree-l1 current">
-        <a class="toctree-l1-a current" href="./">Import-FasAuthorizationCertificateResponse</a>
-		
-            <ul style="margin-left: 0px;padding-left:15px;border-left: 1px solid #b2b2b2;">
-            
-                <li class="toctree-l3"><a href="#import-fasauthorizationcertificateresponse" style="padding:0px;position: relative;">&nbsp;Import-FasAuthorizationCertificateResponse</a></li>
-                
-                    <li><a class="toctree-l4" href="#synopsis" style="padding:0px;position: relative;">Synopsis</a></li>
-                
-                    <li><a class="toctree-l4" href="#syntax" style="padding:0px;position: relative;">Syntax</a></li>
-                
-                    <li><a class="toctree-l4" href="#description" style="padding:0px;position: relative;">Description</a></li>
-                
-                    <li><a class="toctree-l4" href="#examples" style="padding:0px;position: relative;">Examples</a></li>
-                
-                    <li><a class="toctree-l4" href="#parameters" style="padding:0px;position: relative;">Parameters</a></li>
-                
-                    <li><a class="toctree-l4" href="#inputs" style="padding:0px;position: relative;">Inputs</a></li>
-                
-                    <li><a class="toctree-l4" href="#outputs" style="padding:0px;position: relative;">Outputs</a></li>
-                
-                    <li><a class="toctree-l4" href="#notes" style="padding:0px;position: relative;">Notes</a></li>
-                
-                    <li><a class="toctree-l4" href="#related-links" style="padding:0px;position: relative;">Related Links</a></li>
-                
-            
-            </ul>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="toctree-l1-a " href="../New-FasAuthorizationCertificate/">New-FasAuthorizationCertificate</a>
-		
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="toctree-l1-a " href="../New-FasAuthorizationCertificateRequest/">New-FasAuthorizationCertificateRequest</a>
-		
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="toctree-l1-a " href="../New-FasCertificateDefinition/">New-FasCertificateDefinition</a>
-		
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="toctree-l1-a " href="../New-FasCloudConfig/">New-FasCloudConfig</a>
-		
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="toctree-l1-a " href="../New-FasMsTemplate/">New-FasMsTemplate</a>
-		
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="toctree-l1-a " href="../New-FasPolicyOid/">New-FasPolicyOid</a>
-		
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="toctree-l1-a " href="../New-FasRule/">New-FasRule</a>
-		
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="toctree-l1-a " href="../New-FasUserCertificate/">New-FasUserCertificate</a>
-		
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="toctree-l1-a " href="../Publish-FasMsTemplate/">Publish-FasMsTemplate</a>
-		
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="toctree-l1-a " href="../Remove-FasAuthorizationCertificate/">Remove-FasAuthorizationCertificate</a>
-		
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="toctree-l1-a " href="../Remove-FasCertificateDefinition/">Remove-FasCertificateDefinition</a>
-		
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="toctree-l1-a " href="../Remove-FasCloudConfig/">Remove-FasCloudConfig</a>
-		
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="toctree-l1-a " href="../Remove-FasMsTemplate/">Remove-FasMsTemplate</a>
-		
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="toctree-l1-a " href="../Remove-FasPolicyOid/">Remove-FasPolicyOid</a>
-		
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="toctree-l1-a " href="../Remove-FasRule/">Remove-FasRule</a>
-		
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="toctree-l1-a " href="../Remove-FasUserCertificate/">Remove-FasUserCertificate</a>
-		
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="toctree-l1-a " href="../Set-FasAdministrationPolicy/">Set-FasAdministrationPolicy</a>
-		
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="toctree-l1-a " href="../Set-FasCertificateDefinition/">Set-FasCertificateDefinition</a>
-		
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="toctree-l1-a " href="../Set-FasCloudConfig/">Set-FasCloudConfig</a>
-		
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="toctree-l1-a " href="../Set-FasPolicyOid/">Set-FasPolicyOid</a>
-		
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="toctree-l1-a " href="../Set-FasRule/">Set-FasRule</a>
-		
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="toctree-l1-a " href="../Set-FasServer/">Set-FasServer</a>
-		
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="toctree-l1-a " href="../Unpublish-FasMsTemplate/">Unpublish-FasMsTemplate</a>
-		
-    </li>
-
-        
-    </ul>
-
-			  
-            </ul>
-          </div>
-          &nbsp;
-        </nav>
-
-        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-           
-          <div class="wy-nav-content">
-            <div class="rst-content">
-              <!-- <div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="..">Docs</a> &raquo;</li>
-    
-      
-        
-          <li>cmdlets reference &raquo;</li>
-        
-      
-    
-    <li>Import-FasAuthorizationCertificateResponse</li>
-    <li class="wy-breadcrumbs-aside">
-      
-    </li>
-  </ul>
-  <hr/>
-</div> -->
-              <div role="main">
-                <div class="section">
-                <div class="file-format">
-                 <div class="leftAlign" style="float: left;visibility: hidden;">
-                  </div>
-                  <div class="rightAlign" style="float: right;">
-                      <span>Download full document:</span>
-                      <ul class="file-types">
-                        <li><a style="border: 1px solid #EE3D24;padding: 5px;font-size: 11px;color: #EE3D24;border-radius: 5px;font-weight: 700">PDF</a></li>
-                        <li><a style="border: 1px solid #2A579A;padding: 5px;font-size: 11px;color: #2A579A;border-radius: 5px;font-weight: 700">DOCX</a></li>
-                        <li><a style="border: 1px solid #495164;padding: 5px;font-size: 11px;color: #495164;border-radius: 5px;font-weight: 700">EMAIL</a></li>
-                        <li><a style="border: 1px solid #495164;padding: 5px;font-size: 11px;color: #495164;border-radius: 5px;font-weight: 700">PRINT</a></li>
-                      </ul>
-                  </div>
-                  </div>
-                   <h1 id="import-fasauthorizationcertificateresponse">Import-FasAuthorizationCertificateResponse</h1>
+<h1 id="import-fasauthorizationcertificateresponse">Import-FasAuthorizationCertificateResponse</h1>
 <h2 id="synopsis">Synopsis</h2>
 <p>Import a PKCS7 certificate chain containing an RA certificate issued by a certificate authority.</p>
 <h2 id="syntax">Syntax</h2>
@@ -514,39 +328,83 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 <h2 id="related-links">Related Links</h2>
 <p><a href="">New-FasAuthorizationCertificateRequest</a></p>
 <p><a href="">Get-FasAuthorizationCertificate</a></p>
-<p><a href="">Remove-FasAuthorizationCertificate</a></p> 
+<p><a href="">Remove-FasAuthorizationCertificate</a></p></div>
+        </div>
 
-                </div>
-              </div>
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
 
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
             </div>
-          </div>
-
-        </section>
-
-      </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
     </div>
-    <!--<div class="rst-versions" role="note" style="cursor: pointer">
-    <span class="rst-current-version" data-toggle="rst-current-version">
-      
-      
-        <span class="prev"><a href="../Get-FasUserCertificate/"><i class="fa fa-angle-left"></i> Previous</a></span>
-      
-      
-        <span class="next"><a href="../New-FasAuthorizationCertificate/">Next <i class="fa fa-angle-right"></i></a></span>
-      
-    </span>
-	<div class="footer-right">
-		<ul class="social-links">
-			<li class="list-inline"><a href="https://twitter.com/citrix"><i class="fa fa-twitter"></i>@citrix</a></li>
-			<li class="list-inline"><a href="mailto:support@citrix.com"><i class="fa fa-envelope-o"></i>support@citrix.com</a></li>
-		</ul>
-		<ul class="inner-pages">
-			<li class="list-inline"><a href="http://citrix.com/about/legal">Privacy and Terms</li>
-		</ul>
-	</div>
-</div>-->
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
 
-  </body>
-
+    </body>
 </html>

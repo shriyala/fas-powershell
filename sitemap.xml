@@ -1,228 +1,163 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-    
-        
     <url>
-     <loc>/</loc>
-     <lastmod>2019-02-21</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-03-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
-    
-
-    
-        
     <url>
-     <loc>/Get-FasAdministrationPolicy/</loc>
-     <lastmod>2019-02-21</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-03-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/Get-FasAuthorizationCertificate/</loc>
-     <lastmod>2019-02-21</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-03-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/Get-FasCertificateDefinition/</loc>
-     <lastmod>2019-02-21</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-03-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/Get-FasCloudConfig/</loc>
-     <lastmod>2019-02-21</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-03-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/Get-FasMsCertificateAuthority/</loc>
-     <lastmod>2019-02-21</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-03-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/Get-FasMsTemplate/</loc>
-     <lastmod>2019-02-21</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-03-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/Get-FasPolicyOid/</loc>
-     <lastmod>2019-02-21</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-03-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/Get-FasRule/</loc>
-     <lastmod>2019-02-21</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-03-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/Get-FasServer/</loc>
-     <lastmod>2019-02-21</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-03-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/Get-FasServerForUser/</loc>
-     <lastmod>2019-02-21</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-03-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/Get-FasUserCertificate/</loc>
-     <lastmod>2019-02-21</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-03-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/Import-FasAuthorizationCertificateResponse/</loc>
-     <lastmod>2019-02-21</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-03-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/New-FasAuthorizationCertificate/</loc>
-     <lastmod>2019-02-21</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-03-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/New-FasAuthorizationCertificateRequest/</loc>
-     <lastmod>2019-02-21</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-03-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/New-FasCertificateDefinition/</loc>
-     <lastmod>2019-02-21</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-03-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/New-FasCloudConfig/</loc>
-     <lastmod>2019-02-21</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-03-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/New-FasMsTemplate/</loc>
-     <lastmod>2019-02-21</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-03-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/New-FasPolicyOid/</loc>
-     <lastmod>2019-02-21</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-03-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/New-FasRule/</loc>
-     <lastmod>2019-02-21</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-03-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/New-FasUserCertificate/</loc>
-     <lastmod>2019-02-21</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-03-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/Publish-FasMsTemplate/</loc>
-     <lastmod>2019-02-21</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-03-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/Remove-FasAuthorizationCertificate/</loc>
-     <lastmod>2019-02-21</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-03-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/Remove-FasCertificateDefinition/</loc>
-     <lastmod>2019-02-21</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-03-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/Remove-FasCloudConfig/</loc>
-     <lastmod>2019-02-21</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-03-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/Remove-FasMsTemplate/</loc>
-     <lastmod>2019-02-21</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-03-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/Remove-FasPolicyOid/</loc>
-     <lastmod>2019-02-21</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-03-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/Remove-FasRule/</loc>
-     <lastmod>2019-02-21</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-03-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/Remove-FasUserCertificate/</loc>
-     <lastmod>2019-02-21</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-03-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/Set-FasAdministrationPolicy/</loc>
-     <lastmod>2019-02-21</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-03-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/Set-FasCertificateDefinition/</loc>
-     <lastmod>2019-02-21</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-03-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/Set-FasCloudConfig/</loc>
-     <lastmod>2019-02-21</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-03-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
-    <url>
-     <loc>/Set-FasPolicyOid/</loc>
-     <lastmod>2019-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/Set-FasRule/</loc>
-     <lastmod>2019-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/Set-FasServer/</loc>
-     <lastmod>2019-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/Unpublish-FasMsTemplate/</loc>
-     <lastmod>2019-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    
-
 </urlset>
