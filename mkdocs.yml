@@ -12,18 +12,19 @@ pages:
 - Citrix Federated Authentication Service PowerShell cmdlets:
     - Introduction: index.md
 - cmdlets reference:
+  - Get-FasAdministrationPolicy: Get-FasAdministrationPolicy.md
   - Get-FasAuthorizationCertificate: Get-FasAuthorizationCertificate.md
   - Get-FasCertificateDefinition: Get-FasCertificateDefinition.md
   - Get-FasMsCertificateAuthority: Get-FasMsCertificateAuthority.md
   - Get-FasMsTemplate: Get-FasMsTemplate.md
   - Get-FasPolicyOid: Get-FasPolicyOid.md
   - Get-FasRule: Get-FasRule.md
-  - Get-FasServerForUser: Get-FasServerForUser.md
   - Get-FasServer: Get-FasServer.md
+  - Get-FasServerForUser: Get-FasServerForUser.md
   - Get-FasUserCertificate: Get-FasUserCertificate.md
   - Import-FasAuthorizationCertificateResponse: Import-FasAuthorizationCertificateResponse.md
-  - New-FasAuthorizationCertificateRequest: New-FasAuthorizationCertificateRequest.md
   - New-FasAuthorizationCertificate: New-FasAuthorizationCertificate.md
+  - New-FasAuthorizationCertificateRequest: New-FasAuthorizationCertificateRequest.md
   - New-FasCertificateDefinition: New-FasCertificateDefinition.md
   - New-FasMsTemplate: New-FasMsTemplate.md
   - New-FasPolicyOid: New-FasPolicyOid.md
@@ -36,6 +37,7 @@ pages:
   - Remove-FasPolicyOid: Remove-FasPolicyOid.md
   - Remove-FasRule: Remove-FasRule.md
   - Remove-FasUserCertificate: Remove-FasUserCertificate.md
+  - Set-FasAdministrationPolicy: Set-FasAdministrationPolicy.md
   - Set-FasCertificateDefinition: Set-FasCertificateDefinition.md
   - Set-FasPolicyOid: Set-FasPolicyOid.md
   - Set-FasRule: Set-FasRule.md
