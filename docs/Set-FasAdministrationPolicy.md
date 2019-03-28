@@ -1,16 +1,17 @@
-# Get-FasMsCertificateAuthority
+# Set-FasAdministrationPolicy
 
 ## Synopsis
-Retrieve information about the Microsoft Certificate Authorities installed in the domain.
+Sets the local administration policy for the Federated Authentication Service (FAS).
 
 ## Syntax
 
 ```
-Get-FasMsCertificateAuthority [-Address <String>] [-Default <Boolean>] [<CommonParameters>]
+Set-FasAdministrationPolicy [-DefaultToLocalhost <Boolean>] [-CheckAddressAgainstGpo <Boolean>]
+ [<CommonParameters>]
 ```
 
 ## Description
-This commandlet retrieves information about the Microsoft Certificate Authorities installed in the domain, including their unique identifying addresses.
+This cmdlet sets the local administration policy for the Federated Authentication Service (FAS).
 
 ## Examples
 
@@ -18,22 +19,23 @@ This commandlet retrieves information about the Microsoft Certificate Authoritie
 PS C:\\\>
 
 ```
-C:\PS> Get-FasMsCertificateAuthority -Default
+C:\PS> Set-FasAdministrationPolicy -DefaultToLocalhost $true -CheckAddressAgainstGpo $false
 ```
 
 Description
 
 -----------
 
-This command retrieves the address of the default Microsoft Certificate Authority in this domain.
+This code will cause FAS cmdlets which take an optional Address parameter to default to localhost if no address is supplied.
+If an address is supplied, FAS cmdlets will not check the address is present in the GPO.
 
 ## Parameters
 
-### -Address
-Specifies the address of the Microsoft Certificate Authority to retrieve information about (or list them all)
+### -DefaultToLocalhost
+Default to localhost.
 
 ```yaml
-Type: String
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -44,8 +46,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Default
-Return the default or primary Microsoft Certificate Authority in the current domain.
+### -CheckAddressAgainstGpo
+Check the address is present in the FAS GPO.
 
 ```yaml
 Type: Boolean
@@ -54,7 +56,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: $FALSE
+Default value: $NULL
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
@@ -70,15 +72,10 @@ This cmdlet does accept input from the pipeline but only by property name.
 
 ## Outputs
 
-### void
-This cmdlet returns a list of Microsoft Certificate Authority objects
-
 ## Notes
 
 ## Related Links
 
-[Publish-FasMsTemplate]()
-
-[Unpublish-FasMsTemplate]()
+[Get-FasAdministrationPolicy]()
 
 
