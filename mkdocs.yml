@@ -1,5 +1,5 @@
-site_name: Citrix Federated Authentication Service 7.17 PowerShell cmdlets
-site_description: Citrix Federated Authentication Service 7.17 PowerShell cmdlets Reference
+site_name: Citrix Federated Authentication Service 1903 PowerShell cmdlets
+site_description: Citrix Federated Authentication Service 1903 PowerShell cmdlets Reference
 theme_dir: citrix-sdk
 markdown_extensions:
   - admonition
