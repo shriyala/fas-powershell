@@ -1,21 +1,30 @@
-# Remove-FasUserCertificate
+# Test-FasKeyPairCreation
 
 ## Synopsis
-Remove cached certificates on the Federated Authentication Service.
+Creates a key pair
 
 ## Syntax
 
 ```
-Remove-FasUserCertificate [-UserPrincipalName <String>] [-Rule <String[]>] [-CertificateDefinition <String>]
- [-SecurityContext <String>] [-Address <String>] [-UserName <String>] [-Password <String>] [<CommonParameters>]
+Test-FasKeyPairCreation [-AddToPrivateKeyPool <Boolean>] [-PrivateKeyPoolSizeLimit <Int32>] [-Address <String>]
+ [-UserName <String>] [-Password <String>] [<CommonParameters>]
 ```
 
 ## Description
-This command deletes certificates and private keys managed by the Federated Authentication Service. 
-This may affect users who are currently using Virtual Smart Cards as the private key will be immediately unavailable. 
-The Federated Authentication Service will automatically remove certificates when they have expire, so it is unusually not necessary to explicitly delete them.
+This command creates a key pair using the FAS server's configured cryptographic settings.
 
-Note that this command does not itself prevent equivalent certificates being regenerated when the user next logs in, nor does it revoke certificates that are currently in use.
+Use this command to verify key pair creation is working.
+
+The created key pair is discarded by default; use the AddToPrivateKeyPool parameter to add the key pair to the FAS server's private key pool
+for use in a subsequent certificate signing request (CSR).
+Doing this is advantageous because key pair creation is resource intensive.
+
+Even if AddToPrivateKeyPool is set to $true, the created key pair is still discarded if the private key pool has reached its target size (as defined
+by the FAS server's PrivateKeyPoolSize configuration setting).
+Use the PrivateKeyPoolSizeLimit parameter to allow the key pool to
+expand beyond its configured target size.
+
+When the FAS service is stopped, unused keys in the private key pool are destroyed.
 
 ## Examples
 
@@ -24,73 +33,44 @@ PS C:\\\>
 
 ```
 C:\PS> $CitrixFasAddress=(Get-FasServer)[0].Address
-C:\PS> Remove-FasUserCertificate -UserPrincipalName "fred@citrixtest.net"
+C:\PS> Test-FasKeyPairCreation -AddToPrivateKeyPool $true
 ```
 
 Description
 
 -----------
 
-This code immediately deletes all certificates and private keys associated with certificates issued to fred@citrixtest.net.
+This code creates a key pair, and if successful adds the key pair to the FAS server's private key pool,
+provided the key pool has not already reached its target size.
 
 ## Parameters
 
-### -UserPrincipalName
-Filter by UPN on certificate.
+### -AddToPrivateKeyPool
+If true, the created key pair is added to the FAS server's private key pool; if false the key pair is discarded
 
 ```yaml
-Type: String
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: Named
-Default value: $NULL
+Default value: $False
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Rule
-Filter by Rule name.
+### -PrivateKeyPoolSizeLimit
+Override the target private key pool size in the FAS server configuration (0 means do not override)
 
 ```yaml
-Type: String[]
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: Named
-Default value: (default)
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -CertificateDefinition
-Filter by Certificate Type.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: (default)
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -SecurityContext
-Filter by Security Context.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: (default)
+Default value: 0
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
@@ -150,15 +130,13 @@ This cmdlet does accept input from the pipeline but only by property name.
 
 ## Outputs
 
-### void
-This cmdlet returns a list of FasUserCertificate object
+### DiagnosticTestResult
+This cmdlet returns a DiagnosticTestResult object
 
 ## Notes
 
 ## Related Links
 
-[New-FasUserCertificate]()
-
-[Get-FasUserCertificate]()
+[Get-FasPrivateKeyPoolInfo]()
 
 

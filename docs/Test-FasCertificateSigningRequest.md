@@ -1,18 +1,30 @@
-# Get-FasUserCertificate
+# Test-FasCertificateSigningRequest
 
 ## Synopsis
-List cached certificates on the Federated Authentication Service.
+Performs a test certificate signing request (CSR)
 
 ## Syntax
 
 ```
-Get-FasUserCertificate [-UserPrincipalName <String>] [-Rule <String[]>] [-CertificateDefinition <String>]
- [-SecurityContext <String>] [-KeyInfo <Boolean>] [-MaximumRecordCount <Int>] [-Address <String>]
- [-UserName <String>] [-Password <String>] [<CommonParameters>]
+Test-FasCertificateSigningRequest -UserPrincipalName <String> -Rule <String> [-CertificateDefinition <String>]
+ [-CertificateAuthority <String>] [-SecurityContext <String>] [-ReuseCachedTestKey <String>]
+ [-Address <String>] [-UserName <String>] [-Password <String>] [<CommonParameters>]
 ```
 
 ## Description
-This command lists the certificates and private keys managed by the Federated Authentication Service.
+This command performs a test CSR.
+Any resulting certificate is discarded.
+
+Use this test to verify CSRs to the Certificate Authority are working.
+
+The supplied Certificate Definition defines the certificate template, authorization certificate and policy oids
+used for the CSR.
+The supplied Certificate Authority address must be present in the supplied CertificateDefinition.
+
+If ReuseCachedTestKey is false, a new key-pair is created for the CSR.
+
+If ReuseCachedTestKey is true, the test re-uses a cached key-pair for the CSR in order to avoid the overhead of generating a new key-pair.
+The cached key-pair is generated on demand per UPN, and is re-used for a maximum of 1 hour, after which a new key-pair is generated.
 
 ## Examples
 
@@ -21,19 +33,50 @@ PS C:\\\>
 
 ```
 C:\PS> $CitrixFasAddress=(Get-FasServer)[0].Address
-C:\PS> Get-FasUserCertificate
+C:\PS> Test-FasCertificateSigningRequest -UserPrincipalName "fred@citrixtest.net" -Rule Default
 ```
 
 Description
 
 -----------
 
-This code lists all currently cached certificates on the Federated Authentication Service.
+This code performs a test CSR.
 
 ## Parameters
 
 ### -UserPrincipalName
-Filter by UPN on certificate.
+Specify the UPN of the user for whom this certificate is being generated.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: $NULL
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Rule
+Specify the Rule name to use when generating the CSR.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: $NULL
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -CertificateDefinition
+Specify the Certificate Definition to use when generating the CSR.
+If not supplied, the first Certificate Definition of the Rule is used.
 
 ```yaml
 Type: String
@@ -47,23 +90,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Rule
-Filter by Rule name.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: (default)
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -CertificateDefinition
-Filter by Certificate Type.
+### -CertificateAuthority
+Specify the address of Certificate Authority to send the CSR to.
+If not supplied, the first Certificate Authority of the Certificate Definition is used.
 
 ```yaml
 Type: String
@@ -72,13 +101,13 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: (default)
+Default value: $NULL
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
 ### -SecurityContext
-Filter by Security Context.
+Specify the Security Context to use when generating the certificate.
 
 ```yaml
 Type: String
@@ -87,43 +116,28 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: (default)
+Default value: $NULL
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -KeyInfo
-Include private key information in returned cached certificates.
+### -ReuseCachedTestKey
+Specify whether to re-use a test key-pair in the CSR.
 
 ```yaml
-Type: Boolean
+Type: String
 Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: Named
-Default value: $false
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -MaximumRecordCount
-Limit the number of certificates to return.
-
-```yaml
-Type: Int
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: 250
+Default value: $False
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
 ### -Address
-Address of FAS Server (or $NULL to use $CitrixFasAddress)
+Address of FAS Server (or $NULL to use $CitrixFasAddress).
 
 ```yaml
 Type: String
@@ -138,7 +152,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserName
-User name to use for authentication to FAS server ($NULL for current user account)
+User name to use for authentication to FAS server ($NULL for current user account).
 
 ```yaml
 Type: String
@@ -153,7 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### -Password
-Password for authentication to FAS server ($NULL for current user account)
+Password for authentication to FAS server ($NULL for current user account).
 
 ```yaml
 Type: String
@@ -177,15 +191,10 @@ This cmdlet does accept input from the pipeline but only by property name.
 
 ## Outputs
 
-### void
-This cmdlet returns a list of FasUserCertificate object
+### DiagnosticTestResult
+This cmdlet returns a DiagnosticTestResult object
 
 ## Notes
 
 ## Related Links
-
-[New-FasUserCertificate]()
-
-[Remove-FasUserCertificate]()
-
 

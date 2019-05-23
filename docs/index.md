@@ -1,4 +1,4 @@
-# Citrix Federated Authentication Service 1903 PowerShell cmdlets
+# Citrix Federated Authentication Service 1906 PowerShell cmdlets
 
 Citrix Federated Authentication Service provides various Microsoft Windows PowerShell cmdlets in a PowerShell snapin. These cmdlets allow you to perform advanced configuration functions.
 
@@ -24,6 +24,7 @@ Start a shell in PowerShell.
 - [Get-FasMsCertificateAuthority](Get-FasMsCertificateAuthority.md)
 - [Get-FasMsTemplate](Get-FasMsTemplate.md)
 - [Get-FasPolicyOid](Get-FasPolicyOid.md)
+- [Get-FasPrivateKeyPoolInfo](Get-FasPrivateKeyPoolInfo.md)
 - [Get-FasRule](Get-FasRule.md)
 - [Get-FasServer](Get-FasServer.md)
 - [Get-FasServerForUser](Get-FasServerForUser.md)
@@ -48,4 +49,8 @@ Start a shell in PowerShell.
 - [Set-FasPolicyOid](Set-FasPolicyOid.md)
 - [Set-FasRule](Set-FasRule.md)
 - [Set-FasServer](Set-FasServer.md)
+- [Test-FasCertificateSigningRequest](Test-FasCertificateSigningRequest.md)
+- [Test-FasCrypto](Test-FasCrypto.md)
+- [Test-FasKeyPairCreation](Test-FasKeyPairCreation.md)
+- [Test-FasUserCertificateCrypto](Test-FasUserCertificateCrypto.md)
 - [Unpublish-FasMsTemplate](Unpublish-FasMsTemplate.md)
