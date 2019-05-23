@@ -43,8 +43,8 @@ pages:
   - Set-FasPolicyOid: Set-FasPolicyOid.md
   - Set-FasRule: Set-FasRule.md
   - Set-FasServer: Set-FasServer.md
-  - Test-FasCertificateSigningRequest: Test-FasCertificateSigningRequest.md)
-  - Test-FasCrypto: Test-FasCrypto.md)
-  - Test-FasKeyPairCreation: Test-FasKeyPairCreation.md)
-  - Test-FasUserCertificateCrypto: Test-FasUserCertificateCrypto.md)
+  - Test-FasCertificateSigningRequest: Test-FasCertificateSigningRequest.md
+  - Test-FasCrypto: Test-FasCrypto.md
+  - Test-FasKeyPairCreation: Test-FasKeyPairCreation.md
+  - Test-FasUserCertificateCrypto: Test-FasUserCertificateCrypto.md
   - Unpublish-FasMsTemplate: Unpublish-FasMsTemplate.md
