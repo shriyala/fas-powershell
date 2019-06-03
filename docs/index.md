@@ -10,7 +10,7 @@ Citrix Federated Authentication Service provides various Microsoft Windows Power
     ```
     Add-PSSnapin Citrix.Authentication.FederatedAuthenticationService.V1
     ```
-> **Note**: In a PowerShell window, you can use **Get-Help \<cmdlet name>** to display cmdlet help.
+> **Note**: In a PowerShell window, you can use **Get-Help &lt;cmdlet name&gt;** to display cmdlet help.
 
 ## To access and run the cmdlets
 
