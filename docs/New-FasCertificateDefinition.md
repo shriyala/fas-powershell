@@ -1,214 +1,70 @@
 # New-FasCertificateDefinition
 
-## Synopsis
 Create a Certificate Definition object (recipe for issuing a certificate).
 
 ## Syntax
 
-```
-New-FasCertificateDefinition [-Name <String>] -CertificateTemplate <String> -AuthorizationCertificate <String>
- -CertificateAuthorities <String[]> [-PolicyOids <String>] [-InSession <Boolean>] [-Address <String>]
- [-UserName <String>] [-Password <String>] [<CommonParameters>]
-```
+`New-FasCertificateDefinition [-Name <String>] -CertificateTemplate <String> -AuthorizationCertificate <String> -CertificateAuthorities <String[]> [-PolicyOids <String>] [-InSession [<Boolean>]] [-Address <String>] [-UserName <String>] [-Password <String>] [<CommonParameters>]`
 
-## Description
-Create a Certificate Definition object that the FAS will use to generate types of certificate.
+## Detailed Description
 
-When generating a certificate, the FAS requires various pieces of information. 
-Including:
-    - The CertificateTemplate to request (see Get-FasMsTemplate)
-    - A list of loadbalanced/failover Certificate Authority Addresses (see Get-FasMsCertificateAuthority)
-    - A reference to the AuthorizationCertificate to use to Authorize the request (see Get-FasAuthorizationCertificate)
-    - A list of additional Issuance Policy OIDs to add to the certificate request (see Get-FasPolicyOid)
-    - A flag indicating if the certificate can be used as an in-session Virtual Smart Card, or only for the logon process.
+Create a Certificate Definition object that the FAS will use to generate types of certificate. When generating a certificate, the FAS requires various pieces of information. Including:
 
-Note that Certificate Definition objects can only be created and managed by the FAS Server administrator, although they can be referenced by "Rule" administrators.
+-  The CertificateTemplate to request (see Get-FasMsTemplate)
+-  A list of loadbalanced/failover Certificate Authority Addresses (see Get-FasMsCertificateAuthority)
+-  A reference to the AuthorizationCertificate to use to Authorize the request (see Get-FasAuthorizationCertificate)
+-  A list of additional Issuance Policy OIDs to add to the certificate request (see Get-FasPolicyOid)
+-  A flag indicating if the certificate can be used as an in-session Virtual Smart Card, or only for the logon process. Note that Certificate Definition objects can only be created and managed by the FAS Server administrator, although they can be referenced by "Rule" administrators.
 
-## Examples
+## Related Commands
 
-### Example 1
-PS C:\\\>
+-  [Get-FasCertificateDefinition](Get-FasCertificateDefinition.md)
 
-```
-C:\PS> $CitrixFasAddress=(Get-FasServer)[0].Address
-C:\PS> $DefaultCA=(Get-FasMsCertificateAuthority -Default).Address
-C:\PS> $AuthorizationCertificate=(Get-FasAuthorizationCertificate)[0].Id
-C:\PS> New-FasCertificateDefinition -CertificateAuthorities $DefaultCA -MsTemplate "Citrix_SmartcardLogon" -AuthorizationCertificate $AuthorizationCertificate
-```
+-  [Set-FasCertificateDefinition](Set-FasCertificateDefinition.md)
 
-Description
+-  [Remove-FasCertificateDefinition](Remove-FasCertificateDefinition.md)
 
------------
+-  [Get-FasAuthorizationCertificate](Get-FasAuthorizationCertificate.md)
 
-This code generates a certificate definition that uses the first authorization certificate to issue Citrix_SmartcardLogon certificates from the default CA
+-  [Get-FasPolicy](Get-FasPolicy.md)
+
+-  [Get-FasMsTemplate](Get-FasMsTemplate.md)
+
+-  [Get-FasMsCertificateAuthority](Get-FasMsCertificateAuthority.md)
 
 ## Parameters
 
-### -Name
-Specify the name of this Certificate Definition (if not specified, defaults to the CertificateTemplate name)
+| Name                     | Description                                                                                                  | Required? | Pipeline Input        | Default Value                |
+|--------------------------|--------------------------------------------------------------------------------------------------------------|-----------|-----------------------|------------------------------|
+| Name                     | Specify the name of this Certificate Definition (if not specified, defaults to the CertificateTemplate name) | false     | true (ByPropertyName) | \[CertificateTemplate name\] |
+| CertificateTemplate      | Specify the name of Certificate Template to use to issue this certificate                                    | true      | true (ByPropertyName) | (default)                    |
+| AuthorizationCertificate | Specify a the Guid Id of an AuthorizationCertificate object                                                  | true      | true (ByPropertyName) | (default)                    |
+| CertificateAuthorities   | Specify a list of Addresses of Certificate Authorities that can issue these certificates                     | true      | true (ByPropertyName) | (default)                    |
+| PolicyOids               | Specify a list of Issuance Policy OIDs to request in the certificate                                         | false     | true (ByPropertyName) | (empty)                      |
+| InSession                | Set to \$FALSE to only allow this certificate to be used for authentication                                  | false     | true (ByPropertyName) | \$FALSE                      |
+| Address                  | Address of FAS Server (or \$NULL to use \$CitrixFasAddress)                                                  | false     | true (ByPropertyName) | \$CitrixFasAddress           |
+| UserName                 | User name to use for authentication to FAS server (\$NULL for current user account)                          | false     | true (ByPropertyName) | \$NULL                       |
+| Password                 | Password for authentication to FAS server (\$NULL for current user account)                                  | false     | true (ByPropertyName) | \$NULL                       |
 
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
+## Input Type
 
-Required: False
-Position: Named
-Default value: [CertificateTemplate name]
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
+### Variable, based on property name
 
-### -CertificateTemplate
-Specify the name of Certificate Template to use to issue this certificate
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: (default)
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -AuthorizationCertificate
-Specify a the Guid Id of an AuthorizationCertificate object
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: (default)
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -CertificateAuthorities
-Specify a list of Addresses of Certificate Authorities that can issue these certificates
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: (default)
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PolicyOids
-Specify a list of Issuance Policy OIDs to request in the certificate
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: (empty)
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -InSession
-Set to $FALSE to only allow this certificate to be used for authentication
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: $FALSE
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Address
-Address of FAS Server (or $NULL to use $CitrixFasAddress)
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: $CitrixFasAddress
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -UserName
-User name to use for authentication to FAS server ($NULL for current user account)
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: $NULL
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Password
-Password for authentication to FAS server ($NULL for current user account)
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: $NULL
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
-
-## Inputs
-
-### Variable, based on property name.
 This cmdlet does accept input from the pipeline but only by property name.
 
-## Outputs
+## Return Values
 
 ### void
+
 This cmdlet does not return a value
 
-## Notes
+## Examples
 
-## Related Links
+### EXAMPLE 1
 
-[Get-FasCertificateDefinition]()
+    C:\PS> $CitrixFasAddress=(Get-FasServer)[0].Address
+    C:\PS> $DefaultCA=(Get-FasMsCertificateAuthority -Default).Address
+    C:\PS> $AuthorizationCertificate=(Get-FasAuthorizationCertificate)[0].Id
+    C:\PS> New-FasCertificateDefinition -CertificateAuthorities $DefaultCA -MsTemplate "Citrix_SmartcardLogon" -AuthorizationCertificate $AuthorizationCertificate
 
-[Set-FasCertificateDefinition]()
-
-[Remove-FasCertificateDefinition]()
-
-[Get-FasAuthorizationCertificate]()
-
-[Get-FasPolicy]()
-
-[Get-FasMsTemplate]()
-
-[Get-FasMsCertificateAuthority]()
-
-
+This code generates a certificate definition that uses the first authorization certificate to issue Citrix\_SmartcardLogon certificates from the default CA

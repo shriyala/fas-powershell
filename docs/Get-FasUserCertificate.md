@@ -1,192 +1,52 @@
 # Get-FasUserCertificate
 
-## Synopsis
 List cached certificates on the Federated Authentication Service.
 
 ## Syntax
 
-```
-Get-FasUserCertificate [-UserPrincipalName <String>] [-Rule <String[]>] [-CertificateDefinition <String>]
- [-SecurityContext <String>] [-KeyInfo <Boolean>] [-MaximumRecordCount <Int>] [-Address <String>]
- [-UserName <String>] [-Password <String>] [<CommonParameters>]
-```
+`Get-FasUserCertificate [-UserPrincipalName <String>] [-Rule <String[]>] [-CertificateDefinition <String>] [-MaximumRecordCount <Int>] [-Address <String>] [-UserName <String>] [-Password <String>] [<CommonParameters>]`
 
-## Description
+## Detailed Description
+
 This command lists the certificates and private keys managed by the Federated Authentication Service.
 
-## Examples
+## Related Commands
 
-### Example 1
-PS C:\\\>
+-  [New-FasUserCertificate](New-FasUserCertificate.md)
 
-```
-C:\PS> $CitrixFasAddress=(Get-FasServer)[0].Address
-C:\PS> Get-FasUserCertificate
-```
-
-Description
-
------------
-
-This code lists all currently cached certificates on the Federated Authentication Service.
+-  [Remove-FasUserCertificate](Remove-FasUserCertificate.md)
 
 ## Parameters
 
-### -UserPrincipalName
-Filter by UPN on certificate.
+| Name                  | Description                                                                         | Required? | Pipeline Input        | Default Value      |
+|-----------------------|-------------------------------------------------------------------------------------|-----------|-----------------------|--------------------|
+| UserPrincipalName     | Filter by UPN on certificate.                                                       | false     | true (ByPropertyName) | \$NULL             |
+| Rule                  | Filter by Rule name.                                                                | false     | true (ByPropertyName) | (default)          |
+| CertificateDefinition | Filter by Certificate Type.                                                         | false     | true (ByPropertyName) | (default)          |
+| SecurityContext       | Filter by Security Context.                                                         | false     | true (ByPropertyName) | (default)          |
+| KeyInfo               | Include private key information in returned certificates.                           | false     | true (ByPropertyName) | (default)          |
+| MaximumRecordCount    | Limit the number of certificates to return.                                         | false     | true (ByPropertyName) | 250                |
+| Address               | Address of FAS Server (or \$NULL to use \$CitrixFasAddress)                         | false     | true (ByPropertyName) | \$CitrixFasAddress |
+| UserName              | User name to use for authentication to FAS server (\$NULL for current user account) | false     | true (ByPropertyName) | \$NULL             |
+| Password              | Password for authentication to FAS server (\$NULL for current user account)         | false     | true (ByPropertyName) | \$NULL             |
 
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
+## Input Type
 
-Required: False
-Position: Named
-Default value: $NULL
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
+### Variable, based on property name
 
-### -Rule
-Filter by Rule name.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: (default)
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -CertificateDefinition
-Filter by Certificate Type.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: (default)
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -SecurityContext
-Filter by Security Context.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: (default)
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -KeyInfo
-Include private key information in returned cached certificates.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: $false
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -MaximumRecordCount
-Limit the number of certificates to return.
-
-```yaml
-Type: Int
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: 250
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Address
-Address of FAS Server (or $NULL to use $CitrixFasAddress)
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: $CitrixFasAddress
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -UserName
-User name to use for authentication to FAS server ($NULL for current user account)
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: $NULL
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Password
-Password for authentication to FAS server ($NULL for current user account)
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: $NULL
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
-
-## Inputs
-
-### Variable, based on property name.
 This cmdlet does accept input from the pipeline but only by property name.
 
-## Outputs
+## Return Values
 
 ### void
+
 This cmdlet returns a list of FasUserCertificate object
 
-## Notes
+## Examples
 
-## Related Links
+### EXAMPLE 1
 
-[New-FasUserCertificate]()
+    C:\PS> $CitrixFasAddress=(Get-FasServer)[0].Address
+    C:\PS> Get-FasUserCertificate
 
-[Remove-FasUserCertificate]()
-
-
+This code lists all currently cached certificates on the Federated Authentication Service.

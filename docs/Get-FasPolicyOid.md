@@ -1,88 +1,46 @@
 # Get-FasPolicyOid
 
-## Synopsis
 Retrieve information about the Issuance Policy Oids registered in the domain.
 
 ## Syntax
 
-```
-Get-FasPolicyOid [-Name <String>] [-Path <String>] [<CommonParameters>]
-```
+`Get-FasPolicyOid [-Name <String>] [-Path <String>] [<CommonParameters>]`
 
-## Description
-This commandlet retrieves information about the Issuance Policy Oids registered in the domain, including their human readable name and associated security groups.
+## Detailed Description
 
-Certificate Issuance Policy Oids are attributes that can optionally be included in certificates issued by the Microsoft Certificate Authority. 
-By default, these include Low/Medium/High Assurance levels and provide an indication of the level or type of approval to which a certificate holder has been authorized. 
-When logging in, Windows will dynamically add the user to additional Universal Security Groups that have been associated with these Oids.
+This commandlet retrieves information about the Issuance Policy Oids registered in the domain, including their human readable name and associated security groups. Certificate Issuance Policy Oids are attributes that can optionally be included in certificates issued by the Microsoft Certificate Authority. By default, these include Low/Medium/High Assurance levels and provide an indication of the level or type of approval to which a certificate holder has been authorized. When logging in, Windows will dynamically add the user to additional Universal Security Groups that have been associated with these Oids.
 
-## Examples
+## Related Commands
 
-### Example 1
-PS C:\\\>
+-  [New-FasPolicyOid](New-FasPolicyOid.md)
 
-```
-C:\PS> Get-FasPolicyOid
-```
+-  [Set-FasPolicyOid](Set-FasPolicyOid.md)
 
-Description
-
------------
-
-This command retrieves the address Policy Oids registered in this forest.
+-  [Remove-FasPolicyOid](Remove-FasPolicyOid.md)
 
 ## Parameters
 
-### -Name
-Specifies the name of a policy oid to retrieve (or $NULL to list them all).
+| Name    | Description                                                                       | Required? | Pipeline Input        | Default Value |
+|---------|-----------------------------------------------------------------------------------|-----------|-----------------------|---------------|
+| Name    | Specifies the name of a policy oid to retrieve (or \$NULL to list them all).      | false     | true (ByPropertyName) | \$NULL        |
+| Default | Specifies the LDAP path of a policy oid to retrieve (or \$NULL to list them all). | false     | true (ByPropertyName) | \$NULL        |
 
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
+## Input Type
 
-Required: False
-Position: Named
-Default value: $NULL
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
+### Variable, based on property name
 
-### -Path
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
-
-## Inputs
-
-### Variable, based on property name.
 This cmdlet does accept input from the pipeline but only by property name.
 
-## Outputs
+## Return Values
 
 ### void
+
 This cmdlet returns a list of Microsoft Policy Oid objects
 
-## Notes
+## Examples
 
-## Related Links
+### EXAMPLE 1
 
-[New-FasPolicyOid]()
+    C:\PS> Get-FasPolicyOid
 
-[Set-FasPolicyOid]()
-
-[Remove-FasPolicyOid]()
-
-
+This command retrieves the address Policy Oids registered in this forest.
