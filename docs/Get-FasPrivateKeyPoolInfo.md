@@ -1,17 +1,18 @@
-# Get-FasServer
+# Get-FasPrivateKeyPoolInfo
 
 ## Synopsis
-Retrieve information about the Federated Authentication Service (FAS) servers configured via Group Policy.
+Gets information about the FAS server's private key pool
 
 ## Syntax
 
 ```
-Get-FasServer [-Address <String>] [-UserName <String>] [-Password <String>] [<CommonParameters>]
+Get-FasPrivateKeyPoolInfo [-Address <String>] [-UserName <String>] [-Password <String>] [<CommonParameters>]
 ```
 
 ## Description
-This cmdlet returns information about the Federated Authentication Service (FAS) servers configured on this server via GPO. 
-In particular this includes the addresses for remote configuration.
+This command gets information about the FAS server's private key pool.
+
+Key pair creation is resource intensive, so FAS maintains a pool of private keys to use in certificate signing requests (CSRs)
 
 ## Examples
 
@@ -19,19 +20,20 @@ In particular this includes the addresses for remote configuration.
 PS C:\\\>
 
 ```
-C:\PS> Get-FasServer
+C:\PS> $CitrixFasAddress=(Get-FasServer)[0].Address
+C:\PS> Get-FasPrivateKeyPoolInfo
 ```
 
 Description
 
 -----------
 
-This code lists the FAS Servers configured via Group Policy.
+Returns information about the FAS server's private key pool
 
 ## Parameters
 
 ### -Address
-Specify a particular FAS server to contact (or $NULL to list all configured servers)
+Address of FAS Server (or $NULL to use $CitrixFasAddress)
 
 ```yaml
 Type: String
@@ -40,7 +42,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: $NULL
+Default value: $CitrixFasAddress
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
@@ -85,8 +87,8 @@ This cmdlet does accept input from the pipeline but only by property name.
 
 ## Outputs
 
-### void
-This cmdlet returns a list of FAS server objects
+### PrivateKeyPoolInfo
+This cmdlet returns a PrivateKeyPoolInfo object
 
 ## Notes
 

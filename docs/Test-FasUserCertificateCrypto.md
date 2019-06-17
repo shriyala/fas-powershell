@@ -1,21 +1,23 @@
-# Remove-FasUserCertificate
+# Test-FasUserCertificateCrypto
 
 ## Synopsis
-Remove cached certificates on the Federated Authentication Service.
+Performs a test signature operation with a user certificate
 
 ## Syntax
 
 ```
-Remove-FasUserCertificate [-UserPrincipalName <String>] [-Rule <String[]>] [-CertificateDefinition <String>]
- [-SecurityContext <String>] [-Address <String>] [-UserName <String>] [-Password <String>] [<CommonParameters>]
+Test-FasUserCertificateCrypto -UserPrincipalName <String> -Rule <String> [-CertificateDefinition <String>]
+ [-HashingAlgorithm <String>] [-Address <String>] [-UserName <String>] [-Password <String>]
+ [<CommonParameters>]
 ```
 
 ## Description
-This command deletes certificates and private keys managed by the Federated Authentication Service. 
-This may affect users who are currently using Virtual Smart Cards as the private key will be immediately unavailable. 
-The Federated Authentication Service will automatically remove certificates when they have expire, so it is unusually not necessary to explicitly delete them.
+This command signs a piece of data using the private key bound to the user certificate with the given properties.
+The signature created is discarded.
 
-Note that this command does not itself prevent equivalent certificates being regenerated when the user next logs in, nor does it revoke certificates that are currently in use.
+Use this test to verify cyptography is working for a particular user certificate.
+
+If a Certificate Definition is not supplied, the test is performed using the first Certificate Definition of the specified Rule.
 
 ## Examples
 
@@ -24,26 +26,26 @@ PS C:\\\>
 
 ```
 C:\PS> $CitrixFasAddress=(Get-FasServer)[0].Address
-C:\PS> Remove-FasUserCertificate -UserPrincipalName "fred@citrixtest.net"
+C:\PS> Test-FasUserCertificateCrypto -UserPrincipalName "fred@citrixtest.net" -Rule Default
 ```
 
 Description
 
 -----------
 
-This code immediately deletes all certificates and private keys associated with certificates issued to fred@citrixtest.net.
+This code performs a test signature using a user certificate
 
 ## Parameters
 
 ### -UserPrincipalName
-Filter by UPN on certificate.
+Specify the UPN assoicated with the user certificate.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: False
+Required: True
 Position: Named
 Default value: $NULL
 Accept pipeline input: True (ByPropertyName)
@@ -51,22 +53,23 @@ Accept wildcard characters: False
 ```
 
 ### -Rule
-Filter by Rule name.
+Specify the Rule associated with the user certificate.
 
 ```yaml
-Type: String[]
+Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: False
+Required: True
 Position: Named
-Default value: (default)
+Default value: $NULL
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
 ### -CertificateDefinition
-Filter by Certificate Type.
+Specify the Certificate Definition associated with the user certificate.
+If not supplied, the first Certificate Definition of the Rule is used.
 
 ```yaml
 Type: String
@@ -75,13 +78,13 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: (default)
+Default value: (the first certificate definition in the given rule)
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -SecurityContext
-Filter by Security Context.
+### -HashingAlgorithm
+Specify the hashing algorithm to use when performing the signature.
 
 ```yaml
 Type: String
@@ -90,7 +93,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: (default)
+Default value: SHA256
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
@@ -150,8 +153,8 @@ This cmdlet does accept input from the pipeline but only by property name.
 
 ## Outputs
 
-### void
-This cmdlet returns a list of FasUserCertificate object
+### DiagnosticTestResult
+This cmdlet returns a DiagnosticTestResult object
 
 ## Notes
 
@@ -160,5 +163,7 @@ This cmdlet returns a list of FasUserCertificate object
 [New-FasUserCertificate]()
 
 [Get-FasUserCertificate]()
+
+[Test-FasCrypto]()
 
 
