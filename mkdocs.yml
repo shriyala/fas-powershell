@@ -1,14 +1,7 @@
 # Project information
 site_name: Citrix Federated Authentication Service 1906 PowerShell cmdlets
+site_description: Citrix Federated Authentication Service 1906 PowerShell cmdlets Reference
 site_title: Developer Docs
-site_description: Citrix Federated Authentication Service 1906 PowerShell cmdlets
-site_author:
-site_url: 
-
-# Repository
-repo_name: ""
-repo_url: ""
-edit_uri: ""
 
 # Copyright
 copyright: 'Copyright &copy; 1999-2019 Citrix Systems, Inc. All rights reserved. '
