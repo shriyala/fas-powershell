@@ -16,7 +16,7 @@ List the currently available Authorization certificates in use by the Federated 
 The Federated Authentication Service works by dynamically issuing user logon certificates from a Microsoft Certificate Authority. 
 To do this it must first be granted an "Authorization Certificate" (often called an RA or Enrollement Agent certificate) to authenticate to the Certificate Authority.
 
-This command lists all of the WaitingForApproval, Ok, Expired and NotYetValid Authorization certificates available to the FAS server. 
+This command lists all of the WaitingForApproval, Ok, MaintenanceRequired, Expired and NotYetValid Authorization certificates available to the FAS server. 
 The certificate and private key are stored in a container based on the "TrustArea" GUID.
 
 ## Examples
@@ -126,7 +126,8 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## Inputs
 
