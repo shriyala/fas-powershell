@@ -1,83 +1,44 @@
 # Get-FasMsCertificateAuthority
 
-## Synopsis
 Retrieve information about the Microsoft Certificate Authorities installed in the domain.
 
 ## Syntax
 
-```
-Get-FasMsCertificateAuthority [-Address <String>] [-Default <Boolean>] [<CommonParameters>]
-```
+`Get-FasMsCertificateAuthority [-Address <String>] [-Default [<Boolean>]] [<CommonParameters>]`
 
-## Description
+## Detailed Description
+
 This commandlet retrieves information about the Microsoft Certificate Authorities installed in the domain, including their unique identifying addresses.
 
-## Examples
+## Related Commands
 
-### Example 1
-PS C:\\\>
+-  [Publish-FasMsTemplate](Publish-FasMsTemplate.md)
 
-```
-C:\PS> Get-FasMsCertificateAuthority -Default
-```
-
-Description
-
------------
-
-This command retrieves the address of the default Microsoft Certificate Authority in this domain.
+-  [Unpublish-FasMsTemplate](Unpublish-FasMsTemplate.md)
 
 ## Parameters
 
-### -Address
-Specifies the address of the Microsoft Certificate Authority to retrieve information about (or list them all)
+| Name    | Description                                                                                                   | Required? | Pipeline Input        | Default Value |
+|---------|---------------------------------------------------------------------------------------------------------------|-----------|-----------------------|---------------|
+| Address | Specifies the address of the Microsoft Certificate Authority to retrieve information about (or list them all) | false     | true (ByPropertyName) | \$NULL        |
+| Default | Return the default or primary Microsoft Certificate Authority in the current domain.                          | false     | true (ByPropertyName) | \$FALSE       |
 
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
+## Input Type
 
-Required: False
-Position: Named
-Default value: $NULL
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
+### Variable, based on property name
 
-### -Default
-Return the default or primary Microsoft Certificate Authority in the current domain.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: $FALSE
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
-
-## Inputs
-
-### Variable, based on property name.
 This cmdlet does accept input from the pipeline but only by property name.
 
-## Outputs
+## Return Values
 
 ### void
+
 This cmdlet returns a list of Microsoft Certificate Authority objects
 
-## Notes
+## Examples
 
-## Related Links
+### EXAMPLE 1
 
-[Publish-FasMsTemplate]()
+    C:\PS> Get-FasMsCertificateAuthority -Default
 
-[Unpublish-FasMsTemplate]()
-
-
+This command retrieves the address of the default Microsoft Certificate Authority in this domain.

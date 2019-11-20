@@ -1,94 +1,45 @@
 # Publish-FasMsTemplate
 
-## Synopsis
 Publish an installed Microsoft Certificate Template on a Microsoft Certificate Authority.
 
 ## Syntax
 
-```
-Publish-FasMsTemplate -Name <String> -CertificateAuthority <String> [<CommonParameters>]
-```
+`Publish-FasMsTemplate -Name <String> -CertificateAuthority <String> [<CommonParameters>]`
 
-## Description
-This commandlet authorizes a Microsoft Certificate Authority to issue certificates based on a Microsoft Certificate Template.
+## Detailed Description
 
-Microsoft Certificate Authority uses Certificate Templates to describe the types of certificates that it can issue. 
-This includes information such as the validity period and how the certificate should be authorized.
+This commandlet authorizes a Microsoft Certificate Authority to issue certificates based on a Microsoft Certificate Template. Microsoft Certificate Authority uses Certificate Templates to describe the types of certificates that it can issue. This includes information such as the validity period and how the certificate should be authorized. Not all Certificate Authorities issue certificates of all types. This commandlet instructs a Certificate Authority to add an installed Certificate Template as a type of certificate that can be issued. Note that this cmdlet must be run using a High Privilege user account. Equivalent configuration can be done manually using the Microsoft GUI tools.
 
-Not all Certificate Authorities issue certificates of all types. 
-This commandlet instructs a Certificate Authority to add an installed Certificate Template as a type of certificate that can be issued. 
- 
+## Related Commands
 
-Note that this cmdlet must be run using a High Privilege user account. 
-Equivalent configuration can be done manually using the Microsoft GUI tools.
+-  [Unpublish-FasMsTemplate](Unpublish-FasMsTemplate.md)
 
-## Examples
-
-### Example 1
-PS C:\\\>
-
-```
-C:\PS> $ca = Get-FasMSCertificateAuthority -default
-C:\PS> Publish-FasMsTemplate -Name Citrix_SmartcardLogon -CertificateAuthority $ca.Address
-```
-
-Description
-
------------
-
-Publishes the Citrix_SmartcardLogon template on the certificate authority on dc.citrixtest.net
+-  [Get-FasMsCertificateAuthority](Get-FasMsCertificateAuthority.md)
 
 ## Parameters
 
-### -Name
-Specifies the name of the Microsoft Certificate Template to publish.
+| Name                 | Description                                                            | Required? | Pipeline Input        | Default Value |
+|----------------------|------------------------------------------------------------------------|-----------|-----------------------|---------------|
+| Name                 | Specifies the name of the Microsoft Certificate Template to publish.   | true      | true (ByPropertyName) | (required)    |
+| CertificateAuthority | Specifies the Certificate Authority that should publish this template. | true      | true (ByPropertyName) | (required)    |
 
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
+## Input Type
 
-Required: True
-Position: Named
-Default value: (required)
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
+### Variable, based on property name
 
-### -CertificateAuthority
-Specifies the Certificate Authority that should publish this template.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: (required)
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
-
-## Inputs
-
-### Variable, based on property name.
 This cmdlet does accept input from the pipeline but only by property name.
 
-## Outputs
+## Return Values
 
 ### void
+
 This cmdlet does not return a value
 
-## Notes
+## Examples
 
-## Related Links
+### EXAMPLE 1
 
-[Unpublish-FasMsTemplate]()
+    C:\PS> $ca = Get-FasMSCertificateAuthority -default
+    C:\PS> Publish-FasMsTemplate -Name Citrix_SmartcardLogon -CertificateAuthority $ca.Address
 
-[Get-FasMsCertificateAuthority]()
-
-
+Publishes the Citrix\_SmartcardLogon template on the certificate authority on dc.citrixtest.net

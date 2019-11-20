@@ -1,72 +1,46 @@
 # Remove-FasPolicyOid
 
-## Synopsis
 Remove a registered Issuance Policy Oid in the domain.
 
 ## Syntax
 
-```
-Remove-FasPolicyOid -Path <String> [<CommonParameters>]
-```
+`Remove-FasPolicyOid -Path <String> [<CommonParameters>]`
 
-## Description
-This cmdlet removes an existing Issuance Policy Oid registered in the domain.
+## Detailed Description
 
-Note that this cmdlet must be run using a High Privilege user account. 
-Equivalent configuration can be done manually using the Microsoft LDAP configuration tools.
+This cmdlet removes an existing Issuance Policy Oid registered in the domain. Note that this cmdlet must be run using a High Privilege user account. Equivalent configuration can be done manually using the Microsoft LDAP configuration tools.
 
-## Examples
+## Related Commands
 
-### Example 1
-PS C:\\\>
+-  [New-FasPolicyOid](New-FasPolicyOid.md)
 
-```
-C:\PS> $PolicyOid=Get-FasPolicyOid -Name "Finance User Assurance"
-C:\PS> Remove-FasPolicyOid -Path $PolicyOid.Path
-```
+-  [Get-FasPolicyOid](Get-FasPolicyOid.md)
 
-Description
-
------------
-
-This code looks up the LDAP Path of the "Finance User Assurance" OID and deletes it.
+-  [Set-FasPolicyOid](Set-FasPolicyOid.md)
 
 ## Parameters
 
-### -Path
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
+| Name | Description                                          | Required? | Pipeline Input        | Default Value |
+|------|------------------------------------------------------|-----------|-----------------------|---------------|
+| Name | Specifies the LDAP Path of the Policy Oid to delete. | true      | true (ByPropertyName) | (default)     |
 
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
+## Input Type
 
-### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+### Variable, based on property name
 
-## Inputs
-
-### Variable, based on property name.
 This cmdlet does accept input from the pipeline but only by property name.
 
-## Outputs
+## Return Values
 
 ### void
+
 This cmdlet does not return a value
 
-## Notes
+## Examples
 
-## Related Links
+### EXAMPLE 1
 
-[New-FasPolicyOid]()
+    C:\PS> $PolicyOid=Get-FasPolicyOid -Name "Finance User Assurance"
+    C:\PS> Remove-FasPolicyOid -Path $PolicyOid.Path
 
-[Get-FasPolicyOid]()
-
-[Set-FasPolicyOid]()
-
-
+This code looks up the LDAP Path of the "Finance User Assurance" OID and deletes it.
