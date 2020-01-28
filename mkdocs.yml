@@ -2,6 +2,8 @@
 site_name: Citrix Federated Authentication Service 1906 PowerShell cmdlets
 site_description: Citrix Federated Authentication Service 1906 PowerShell cmdlets Reference
 site_title: Developer Docs
+site_url: https://developer-docs.citrix.com
+
 
 # Copyright
 copyright: 'Copyright &copy; 1999-2019 Citrix Systems, Inc. All rights reserved. '
@@ -95,3 +97,4 @@ nav:
   - Test-FasKeyPairCreation: Test-FasKeyPairCreation.md
   - Test-FasUserCertificateCrypto: Test-FasUserCertificateCrypto.md
   - Unpublish-FasMsTemplate: Unpublish-FasMsTemplate.md
+- Questions?: https://discussions.citrix.com/forum/1385-citrix-developer-exchange/
