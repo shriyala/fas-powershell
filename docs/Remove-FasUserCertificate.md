@@ -6,7 +6,7 @@ Remove cached certificates on the Federated Authentication Service.
 ## Syntax
 
 ```
-Remove-FasUserCertificate [-UserPrincipalName <String>] [-Rule <String[]>] [-CertificateDefinition <String>]
+Remove-FasUserCertificate [-UserPrincipalName <String>] [-Rule <String>] [-CertificateDefinition <String>]
  [-SecurityContext <String>] [-Address <String>] [-UserName <String>] [-Password <String>] [<CommonParameters>]
 ```
 
@@ -14,6 +14,8 @@ Remove-FasUserCertificate [-UserPrincipalName <String>] [-Rule <String[]>] [-Cer
 This command deletes certificates and private keys managed by the Federated Authentication Service. 
 This may affect users who are currently using Virtual Smart Cards as the private key will be immediately unavailable. 
 The Federated Authentication Service will automatically remove certificates when they have expire, so it is unusually not necessary to explicitly delete them.
+
+Caution: Using this cmdlet with no filter parameters will delete all user certificates.
 
 Note that this command does not itself prevent equivalent certificates being regenerated when the user next logs in, nor does it revoke certificates that are currently in use.
 
@@ -54,13 +56,13 @@ Accept wildcard characters: False
 Filter by Rule name.
 
 ```yaml
-Type: String[]
+Type: String
 Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: Named
-Default value: (default)
+Default value: $NULL
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
@@ -75,7 +77,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: (default)
+Default value: $NULL
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
@@ -90,7 +92,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: (default)
+Default value: $NULL
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
@@ -151,7 +153,7 @@ This cmdlet does accept input from the pipeline but only by property name.
 ## Outputs
 
 ### void
-This cmdlet returns a list of FasUserCertificate object
+This cmdlet does not have a return value
 
 ## Notes
 

@@ -1,63 +1,50 @@
-# Remove-FasAuthorizationCertificate
+# Remove-FasCloudConfig
 
 ## Synopsis
-This command deletes a FAS Authorization Certificate and associated private key, or removes a pending certificate request
+Delete the Federated Authentication Service (FAS) Cloud configuration.
 
 ## Syntax
 
 ```
-Remove-FasAuthorizationCertificate -Id <String> [-DeleteUserCerts <Boolean>] [-Address <String>]
- [-UserName <String>] [-Password <String>] [<CommonParameters>]
+Remove-FasCloudConfig [-Address <String>] [-UserName <String>] [-Password <String>] [<CommonParameters>]
 ```
 
 ## Description
-This command deletes a FAS Authorization Certificate and associated private key, or removes a pending certificate request. 
-Note that this may affect the operation of the FAS server.
+FAS can be configured to accept identity assertions from Citrix Cloud Workspace.
+
+This cmdlet removes the Federated Authentication Service (FAS) Cloud configuration.
+
+Once the configuration has been removed with this cmdlet, FAS will attempt to unregister itself from Citrix Cloud.
 
 ## Examples
 
-### Example 1
+### ========================== EXAMPLE 1 ==========================
 PS C:\\\>
 
 ```
 C:\PS> $CitrixFasAddress=(Get-FasServer)[0].Address
-C:\PS> Remove-FasAuthorizationCertificate -Id (Get-FasAuthorizationCertificate)[0].Id
+C:\PS> Remove-FasCloudConfig
 ```
 
 Description
 
------------
+===========
 
-This code lists the Authorization certificates on a FAS server and deletes the first one in the list.
+This code removes the FAS cloud configuration.
 
 ## Parameters
 
-### -Id
-ID of the Authorization Certificate to delete
+### -Address
+Specify a particular FAS server to contact (or $NULL to use $CitrixFasAddress)
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: True
-Position: Named
-Default value: (required)
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -DeleteUserCerts
-Flag to indicate if the user certificates should also be deleted
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
 Required: False
 Position: Named
-Default value: $TRUE
+Default value: $NULL
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
@@ -92,19 +79,6 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Address
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -116,14 +90,16 @@ This cmdlet does accept input from the pipeline but only by property name.
 ## Outputs
 
 ### void
-This cmdlet does not return a value
+This cmdlet returns nothing
 
 ## Notes
 
 ## Related Links
 
-[New-FasAuthorizationCertificate]()
+[Get-FasCloudConfig]()
 
-[Get-FasAuthorizationCertificate]()
+[Set-FasCloudConfig]()
+
+[New-FasCloudConfig]()
 
 

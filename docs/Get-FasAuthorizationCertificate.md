@@ -6,8 +6,8 @@ List the currently available Authorization certificates in use by the Federated 
 ## Syntax
 
 ```
-Get-FasAuthorizationCertificate [-CertificateAuthority <String>] [-Address <String>] [-UserName <String>]
- [-Password <String>] [-FullCertInfo <Boolean>] [<CommonParameters>]
+Get-FasAuthorizationCertificate [-CertificateAuthority <String>] [-FullCertInfo] [-Address <String>]
+ [-UserName <String>] [-Password <String>] [<CommonParameters>]
 ```
 
 ## Description
@@ -16,8 +16,14 @@ List the currently available Authorization certificates in use by the Federated 
 The Federated Authentication Service works by dynamically issuing user logon certificates from a Microsoft Certificate Authority. 
 To do this it must first be granted an "Authorization Certificate" (often called an RA or Enrollement Agent certificate) to authenticate to the Certificate Authority.
 
-This command lists all of the WaitingForApproval, Ok, Expired and NotYetValid Authorization certificates available to the FAS server. 
-The certificate and private key are stored in a container based on the "TrustArea" GUID.
+This command lists all the Authorization certificates on the FAS server.
+
+The status of each certificate may be one of the following:
+  Ok - the certificate is OK
+  WaitingForApproval - the certificate request is pending approval by the CA administrator
+  Expired - the certificate is expired
+  NotYetValid - the certificate is not yet valid
+  Denied - the certificate request was denied (a reason string is provided)
 
 ## Examples
 
@@ -67,6 +73,21 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -FullCertInfo
+Switch specifying that details of the authorization certificate should be returned
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -UserName
 User name to use for authentication to FAS server ($NULL for current user account)
 
@@ -93,21 +114,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: $NULL
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -FullCertInfo
-Flag specifying if details of the authorization certificate should be returned
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: $true
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
@@ -142,7 +148,7 @@ This cmdlet returns a list of FasAuthorizationCertificate objects
 
 ## Related Links
 
-[Get-FasAuthorizationCertificate]()
+[New-FasAuthorizationCertificate]()
 
 [Remove-FasAuthorizationCertificate]()
 

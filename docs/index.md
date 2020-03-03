@@ -1,4 +1,4 @@
-# Citrix Federated Authentication Service 1906 PowerShell cmdlets
+# Citrix Federated Authentication Service 2003 PowerShell cmdlets
 
 Citrix Federated Authentication Service provides various Microsoft Windows PowerShell cmdlets in a PowerShell snapin. These cmdlets allow you to perform advanced configuration functions.
 
@@ -21,6 +21,7 @@ Start a shell in PowerShell.
 - [Get-FasAdministrationPolicy](Get-FasAdministrationPolicy.md)
 - [Get-FasAuthorizationCertificate](Get-FasAuthorizationCertificate.md)
 - [Get-FasCertificateDefinition](Get-FasCertificateDefinition.md)
+- [Get-FasCloudConfig](Get-FasCloudConfig.md)
 - [Get-FasMsCertificateAuthority](Get-FasMsCertificateAuthority.md)
 - [Get-FasMsTemplate](Get-FasMsTemplate.md)
 - [Get-FasPolicyOid](Get-FasPolicyOid.md)
@@ -33,6 +34,7 @@ Start a shell in PowerShell.
 - [New-FasAuthorizationCertificate](New-FasAuthorizationCertificate.md)
 - [New-FasAuthorizationCertificateRequest](New-FasAuthorizationCertificateRequest.md)
 - [New-FasCertificateDefinition](New-FasCertificateDefinition.md)
+- [New-FasCloudConfig](New-FasCloudConfig.md)
 - [New-FasMsTemplate](New-FasMsTemplate.md)
 - [New-FasPolicyOid](New-FasPolicyOid.md)
 - [New-FasRule](New-FasRule.md)
@@ -40,12 +42,14 @@ Start a shell in PowerShell.
 - [Publish-FasMsTemplate](Publish-FasMsTemplate.md)
 - [Remove-FasAuthorizationCertificate](Remove-FasAuthorizationCertificate.md)
 - [Remove-FasCertificateDefinition](Remove-FasCertificateDefinition.md)
+- [Remove-FasCloudConfig](Remove-FasCloudConfig.md)
 - [Remove-FasMsTemplate](Remove-FasMsTemplate.md)
 - [Remove-FasPolicyOid](Remove-FasPolicyOid.md)
 - [Remove-FasRule](Remove-FasRule.md)
 - [Remove-FasUserCertificate](Remove-FasUserCertificate.md)
 - [Set-FasAdministrationPolicy](Set-FasAdministrationPolicy.md)
 - [Set-FasCertificateDefinition](Set-FasCertificateDefinition.md)
+- [Set-FasCloudConfig](Set-FasCloudConfig.md)
 - [Set-FasPolicyOid](Set-FasPolicyOid.md)
 - [Set-FasRule](Set-FasRule.md)
 - [Set-FasServer](Set-FasServer.md)

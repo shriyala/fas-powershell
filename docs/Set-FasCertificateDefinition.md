@@ -12,13 +12,13 @@ Set-FasCertificateDefinition -Name <String> [-CertificateTemplate <String>]
 ```
 
 ## Description
-Change the confiration of an existing Certificate Definition object that the FAS is using to generate certificates.
+Change the configuration of an existing Certificate Definition object that FAS is using to generate user certificates.
 
-When generating a certificate, the FAS requires various pieces of information. 
+When generating a certificate, FAS requires various pieces of information. 
 Including:
     - The CertificateTemplate to request (see Get-FasMsTemplate)
     - A list of loadbalanced/failover Certificate Authority Addresses (see Get-FasMsCertificateAuthority)
-    - A reference to the AuthorizationCertificate to use to Authorize the request (see Get-FasAuthorizationCertificate)
+    - The ID of the AuthorizationCertificate to use to Authorize the request (see Get-FasAuthorizationCertificate)
     - A list of additional Issuance Policy OIDs to add to the certificate request (see Get-FasPolicyOid)
     - A flag indicating if the certificate can be used as an in-session Virtual Smart Card, or only for the logon process.
 
@@ -32,15 +32,14 @@ PS C:\\\>
 ```
 C:\PS> $CitrixFasAddress=(Get-FasServer)[0].Address
 C:\PS> $DefaultCA=(Get-FasMsCertificateAuthority -Default).Address
-C:\PS> $AuthorizationCertificate=(Get-FasAuthorizationCertificate)[0].Id
-C:\PS> Set-FasCertificateDefinition -Name MyCertificateDefinition -CertificateAuthorities $DefaultCA -MsTemplate "Citrix_SmartcardLogon" -AuthorizationCertificate $AuthorizationCertificate
+C:\PS> Set-FasCertificateDefinition -Name MyCertificateDefinition -CertificateAuthorities $DefaultCA
 ```
 
 Description
 
 -----------
 
-Updates an existing certificate definition to use the first authorization certificate to issue Citrix_SmartcardLogon certificates from the default CA
+Updates an existing certificate definition named "MyCertificateDefinition" to use the the default CA
 
 ## Parameters
 
@@ -54,7 +53,7 @@ Aliases:
 
 Required: True
 Position: Named
-Default value: (default)
+Default value: (required)
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
@@ -69,13 +68,13 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: (default)
+Default value: (no change)
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
 ### -AuthorizationCertificate
-Change a the Guid Id of an AuthorizationCertificate object
+Change a the Id of an AuthorizationCertificate object
 
 ```yaml
 Type: String
@@ -84,7 +83,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: (default)
+Default value: (no change)
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
@@ -99,7 +98,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: (default)
+Default value: (no change)
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
@@ -114,13 +113,13 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: (empty)
+Default value: (no change)
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
 ### -InSession
-Set to $FALSE to only allow this certificate to be used for authentication
+Change whether to only allow this certificate to be used for authentication
 
 ```yaml
 Type: Boolean
@@ -129,7 +128,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: (default)
+Default value: (no change)
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```

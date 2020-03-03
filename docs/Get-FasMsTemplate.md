@@ -10,7 +10,7 @@ Get-FasMsTemplate [-Name <String>] [<CommonParameters>]
 ```
 
 ## Description
-This commandlet lists information about the Microsoft Certificate Templates currently installed in an Active Directory Deployment
+This commandlet lists information about the Microsoft Certificate Templates currently installed in an Active Directory Deployment.
 
 Microsoft Certificate Authority uses Certificate Templates to describe the types of certificates that it can issue. 
 This includes information such as the validity period and how the certificate should be authorized.

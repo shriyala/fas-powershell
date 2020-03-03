@@ -10,8 +10,7 @@ Remove-FasMsTemplate -Name <String> [<CommonParameters>]
 ```
 
 ## Description
-This commandlet can be used to delete Microsoft Certificate Templates currently installed in an Active Directory Deployment. 
-If the template is currently published on a Certificate Authority, running this command will unpublish it.
+This commandlet can be used to delete a Microsoft Certificate Template currently installed in an Active Directory Deployment.
 
 Microsoft Certificate Authority uses Certificate Templates to describe the types of certificates that it can issue. 
 This includes information such as the validity period and how the certificate should be authorized.

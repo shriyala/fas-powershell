@@ -6,13 +6,15 @@ Generate and cache a certificate for a user on the Federated Authentication Serv
 ## Syntax
 
 ```
-New-FasUserCertificate -UserPrincipalName <String> -Rule <String[]> -CertificateDefinition <String>
+New-FasUserCertificate -UserPrincipalName <String> -Rule <String> -CertificateDefinition <String>
  [-SecurityContext <String>] [-Address <String>] [-UserName <String>] [-Password <String>] [<CommonParameters>]
 ```
 
 ## Description
 This command creates a certificate for a user on the Federated Authentication Service. 
 This can be used for testing purposes, or run at "off-peak" times to spread the load of certificate generation that would otherwise happen at user logon.
+
+A new certificate is not generated if a cached certificate for the user already exists.
 
 ## Examples
 
@@ -42,22 +44,22 @@ Aliases:
 
 Required: True
 Position: Named
-Default value: (default)
+Default value: (required)
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
 ### -Rule
-Specify the Rule name (Federated Authentication Service instance) this certificate is associated with.
+Specify the Rule name (Federated Authentication Service configuration) this certificate is associated with.
 
 ```yaml
-Type: String[]
+Type: String
 Parameter Sets: (All)
 Aliases:
 
 Required: True
 Position: Named
-Default value: (default)
+Default value: (required)
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
@@ -72,7 +74,7 @@ Aliases:
 
 Required: True
 Position: Named
-Default value: (default)
+Default value: (required)
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
@@ -87,7 +89,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: (default)
+Default value: $NULL
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
@@ -148,7 +150,7 @@ This cmdlet does accept input from the pipeline but only by property name.
 ## Outputs
 
 ### void
-This cmdlet does not return a value
+This cmdlet returns the user certificate if successful
 
 ## Notes
 

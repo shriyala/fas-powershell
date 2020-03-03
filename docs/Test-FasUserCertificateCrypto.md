@@ -1,7 +1,7 @@
 # Test-FasUserCertificateCrypto
 
 ## Synopsis
-Performs a test signature operation with a user certificate
+Performs a test signature operation with a user certificate.
 
 ## Syntax
 
@@ -12,10 +12,13 @@ Test-FasUserCertificateCrypto -UserPrincipalName <String> -Rule <String> [-Certi
 ```
 
 ## Description
-This command signs a piece of data using the private key bound to the user certificate with the given properties.
+This command signs a piece of data using the private key bound to the user certificate with the given properties (i.e.
+UPN and rule).
 The signature created is discarded.
 
 Use this test to verify cyptography is working for a particular user certificate.
+
+If the certificate does not exist on the FAS server, it is not created and the test will fail.
 
 If a Certificate Definition is not supplied, the test is performed using the first Certificate Definition of the specified Rule.
 

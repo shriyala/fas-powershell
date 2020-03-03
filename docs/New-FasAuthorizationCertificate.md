@@ -40,7 +40,22 @@ Once access is approved by the CA Administrator, a second request for the actual
 ## Parameters
 
 ### -CertificateAuthority
-Specify the CertificateTemplate of the Registration Authority certificate (e.g.
+Specify the Address of the Certificate Authority to contact (see Get-FasMSCertificateAuthority)
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: (required)
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -CertificateTemplate
+Specify the name of the Certificate Template to use when generating the Registration Authority certificate (e.g.
 "Citrix_RegistrationAuthority").
 
 ```yaml
@@ -50,7 +65,7 @@ Aliases:
 
 Required: True
 Position: Named
-Default value: (default)
+Default value: (required)
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
@@ -116,19 +131,6 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -CertificateTemplate
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -140,7 +142,7 @@ This cmdlet does accept input from the pipeline but only by property name.
 ## Outputs
 
 ### void
-This cmdlet does not return a value
+This cmdlet returns information about the certificate request.
 
 ## Notes
 

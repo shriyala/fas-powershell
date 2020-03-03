@@ -1,13 +1,13 @@
 # Test-FasCertificateSigningRequest
 
 ## Synopsis
-Performs a test certificate signing request (CSR)
+Performs a test certificate signing request (CSR).
 
 ## Syntax
 
 ```
 Test-FasCertificateSigningRequest -UserPrincipalName <String> -Rule <String> [-CertificateDefinition <String>]
- [-CertificateAuthority <String>] [-SecurityContext <String>] [-ReuseCachedTestKey <String>]
+ [-CertificateAuthority <String>] [-SecurityContext <String>] [-ReuseCachedTestKey <Boolean>]
  [-Address <String>] [-UserName <String>] [-Password <String>] [<CommonParameters>]
 ```
 
@@ -17,9 +17,9 @@ Any resulting certificate is discarded.
 
 Use this test to verify CSRs to the Certificate Authority are working.
 
-The supplied Certificate Definition defines the certificate template, authorization certificate and policy oids
+The supplied Certificate Definition (if any) defines the certificate template, authorization certificate and policy oids
 used for the CSR.
-The supplied Certificate Authority address must be present in the supplied CertificateDefinition.
+The supplied Certificate Authority address (if any) must be present in the supplied CertificateDefinition.
 
 If ReuseCachedTestKey is false, a new key-pair is created for the CSR.
 
@@ -54,7 +54,7 @@ Aliases:
 
 Required: True
 Position: Named
-Default value: $NULL
+Default value: (required)
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
@@ -69,7 +69,7 @@ Aliases:
 
 Required: True
 Position: Named
-Default value: $NULL
+Default value: (required)
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
@@ -85,7 +85,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: $NULL
+Default value: (the first certificate definition in the given rule)
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
@@ -101,7 +101,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: $NULL
+Default value: (the first certificate authority of the certificate definition)
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 Specify whether to re-use a test key-pair in the CSR.
 
 ```yaml
-Type: String
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 

@@ -1,13 +1,14 @@
 # Set-FasRule
 
 ## Synopsis
-Modify a Rule's configuration (a named instance of the Federated Authentication Service running on a server).
+Modify a rule (i.e.
+a named configuration of the Federated Authentication Service).
 
 ## Syntax
 
 ```
 Set-FasRule -Name <String> [-CertificateDefinitions <String[]>] [-StoreFrontAcl <String>] [-UserAcl <String>]
- [-VdaAcl <String>] [-DelegatedAdministrationAcl <Boolean>] [-Address <String>] [-UserName <String>]
+ [-VdaAcl <String>] [-DelegatedAdministrationAcl <String>] [-Address <String>] [-UserName <String>]
  [-Password <String>] [<CommonParameters>]
 ```
 
@@ -16,10 +17,10 @@ Set the configuration of an existing named rule controlling which trusted StoreF
 The caller must be a member of the Rule's administration groups.
 
 Normally to log in to a Windows computer the Active Directory Domain Controllers require that "primary credentials" be present - that is a password, or a smartcard, etc. 
-An instance of a Federated Authentication Service allows trusted servers to "assert" user identities without knowledge of primary credentials. 
+A rule configuration on the Federated Authentication Service allows trusted servers to "assert" user identities without knowledge of primary credentials. 
 The configuration options are:
-    - The name of the Rule or Service instance. 
-Usually there will be at least one service named "default", but further, independent services can be run.
+    - The name of the Rule. 
+Usually there will be at least one rule named "default", but further, independent rules can be configured.
     - A reference to the certificate definitions used to issue Virtual Smart Card certificates when user identities are asserted. 
 Note that only Certificate Definitions marked "InSession" can be used after the logon stage.
     - A reference to the Virtual Smart Card to use for log on. 
@@ -63,7 +64,7 @@ Aliases:
 
 Required: True
 Position: Named
-Default value: (default)
+Default value: (required)
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
@@ -79,7 +80,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: $NULL
+Default value: (no change)
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
@@ -87,7 +88,7 @@ Accept wildcard characters: False
 ### -StoreFrontAcl
 Change the SDDL Security Descriptor controlling which servers are trusted to assert user identities using this rule. 
 E.g.
-"D:P(A;OICI;CC;;;XXXX)" replacing xxxx with a SID string.
+"O:BAG:DUD:P(A;OICI;CC;;;XXXX)" replacing xxxx with a SID string.
 
 ```yaml
 Type: String
@@ -96,7 +97,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: $NULL
+Default value: (no change)
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
@@ -104,7 +105,7 @@ Accept wildcard characters: False
 ### -UserAcl
 Change the SDDL Security Descriptor controlling which user identities can be asserted by this rule. 
 E.g.
-"D:P(A;OICI;LC;;;XXXX)" replacing xxxx with a SID string.
+"O:BAG:DUD:P(A;OICI;LC;;;XXXX)" replacing xxxx with a SID string.
 
 ```yaml
 Type: String
@@ -113,7 +114,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: $NULL
+Default value: (no change)
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
@@ -121,7 +122,7 @@ Accept wildcard characters: False
 ### -VdaAcl
 Change the SDDL Security Descriptor controlling which VDAs can be logged into by this rule. 
 E.g.
-"D:P(A;OICI;DC;;;XXXX)" replacing xxxx with a SID string.
+"O:BAG:DUD:P(A;OICI;DC;;;XXXX)" replacing xxxx with a SID string.
 
 ```yaml
 Type: String
@@ -130,7 +131,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: $NULL
+Default value: (no change)
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
@@ -138,16 +139,16 @@ Accept wildcard characters: False
 ### -DelegatedAdministrationAcl
 Change the SDDL Security Descriptor controlling which users can change the configuration of this rule. 
 E.g.
-"D:P(A;OICI;SW;;;XXXX)" replacing xxxx with a SID string.
+"O:BAG:DUD:P(A;OICI;SW;;;XXXX)" replacing xxxx with a SID string.
 
 ```yaml
-Type: Boolean
+Type: String
 Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: Named
-Default value: $NULL
+Default value: (no change)
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```

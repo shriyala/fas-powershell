@@ -28,7 +28,7 @@ Description
 
 -----------
 
-This code lists the FAS Servers configured via Group Policy.
+This code brings the FAS server out of maintenance mode.
 
 ## Parameters
 
@@ -42,7 +42,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: (default)
+Default value: $NULL
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
@@ -103,9 +103,12 @@ This cmdlet does accept input from the pipeline but only by property name.
 ## Outputs
 
 ### void
-This cmdlet returns a list of FAS server objects
+This cmdlet does not return a value
 
 ## Notes
 
 ## Related Links
+
+[Get-FasServer]()
+
 

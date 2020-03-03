@@ -12,7 +12,9 @@ Get-FasPrivateKeyPoolInfo [-Address <String>] [-UserName <String>] [-Password <S
 ## Description
 This command gets information about the FAS server's private key pool.
 
-Key pair creation is resource intensive, so FAS maintains a pool of private keys to use in certificate signing requests (CSRs)
+Key pair creation is resource intensive, so FAS maintains a pool of private keys to use in certificate signing requests (CSRs).
+
+When the FAS service is stopped gracefully, unused keys in the private key pool are destroyed.
 
 ## Examples
 

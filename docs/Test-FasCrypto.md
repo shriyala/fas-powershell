@@ -6,7 +6,7 @@ Performs a test signature operation
 ## Syntax
 
 ```
-Test-FasCrypto [-HashingAlgorithm <String>] [-ReuseCachedTestKey <String>] [-Address <String>]
+Test-FasCrypto [-HashingAlgorithm <String>] [-ReuseCachedTestKey <Boolean>] [-Address <String>]
  [-UserName <String>] [-Password <String>] [<CommonParameters>]
 ```
 
@@ -57,7 +57,7 @@ Accept wildcard characters: False
 Specify whether to re-use a test key-pair in the signing operation.
 
 ```yaml
-Type: String
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 

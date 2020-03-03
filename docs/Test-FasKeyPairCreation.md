@@ -1,7 +1,7 @@
 # Test-FasKeyPairCreation
 
 ## Synopsis
-Creates a key pair
+Creates a key pair.
 
 ## Syntax
 
@@ -24,7 +24,7 @@ by the FAS server's PrivateKeyPoolSize configuration setting).
 Use the PrivateKeyPoolSizeLimit parameter to allow the key pool to
 expand beyond its configured target size.
 
-When the FAS service is stopped, unused keys in the private key pool are destroyed.
+When the FAS service is stopped gracefully, unused keys in the private key pool are destroyed.
 
 ## Examples
 

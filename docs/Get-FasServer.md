@@ -31,7 +31,7 @@ This code lists the FAS Servers configured via Group Policy.
 ## Parameters
 
 ### -Address
-Specify a particular FAS server to contact (or $NULL to list all configured servers)
+Specify a particular FAS server to contact (or omit to list all configured servers)
 
 ```yaml
 Type: String
@@ -40,7 +40,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: $NULL
+Default value: (list all configured servers)
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
@@ -91,4 +91,7 @@ This cmdlet returns a list of FAS server objects
 ## Notes
 
 ## Related Links
+
+[Set-FasServer]()
+
 

@@ -18,7 +18,7 @@ This includes information such as the validity period and how the certificate sh
 The Citrix Federated Authentication Service supplies a number of human-readable XML certificate templates that can be reviewed and installed using this commandlet. 
 Alternatively the equivalent templates can be created using the standard Microsoft Certifiate Template Administration tools.
 
-By default the ACL placed on the Certificate Template will allow only Domain Administrators to have full control of the installed Certificate Template. 
+By default the ACL placed on the Certificate Template will allow Domain Administrators to have full control and Authenticated Users to have read permission. 
 If this is not suitable the -Acl \<SDDL\> parameter can be used to specify a security descriptor.
 
 Note that this cmdlet must be run using a High Privilege user account. 
@@ -75,7 +75,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: D:PAI(A;OICI;FA;;;DA)
+Default value: D:PAI(A;OICI;FA;;;DA)(A;;LCRPRC;;;AU)
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```

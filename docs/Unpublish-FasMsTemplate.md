@@ -32,7 +32,7 @@ Description
 
 -----------
 
-This command instructs the certificate authority on dc.citrixtest.net to stop issuing certificates based on the Citrix_SmartcardLogon template.
+This command instructs the default certificate authority to stop issuing certificates based on the Citrix_SmartcardLogon template.
 
 ## Parameters
 
