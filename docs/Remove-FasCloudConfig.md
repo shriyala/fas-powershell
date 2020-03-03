@@ -18,7 +18,7 @@ Once the configuration has been removed with this cmdlet, FAS will attempt to un
 
 ## Examples
 
-### ========================== EXAMPLE 1 ==========================
+### EXAMPLE 1
 PS C:\\\>
 
 ```

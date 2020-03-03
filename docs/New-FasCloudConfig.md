@@ -25,7 +25,7 @@ Use Get-FasCloudConfig to see the status.
 
 ## Examples
 
-### ========================== EXAMPLE 1 ==========================
+### EXAMPLE 1
 PS C:\\\>
 
 ```
