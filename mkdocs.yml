@@ -58,6 +58,8 @@ markdown_extensions:
 
 # Page tree
 nav:
+- Versions: 
+    - 1906: https://developer-docs.citrix.com/projects/federated-authentication-service-powershell-cmdlets/en/1906/
 - Citrix Federated Authentication Service PowerShell cmdlets:
     - Introduction: index.md
 - cmdlets reference:
