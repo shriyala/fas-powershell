@@ -36,13 +36,11 @@ theme:
   logo: https://developer-docs.citrix.com/_static/Citrix_Logo_Black.png
 
 plugins:
-  - search
+  - search:
+      separator: '[\s\-\.]+'
   
 # Customization
 extra:
-  search:
-    - language: en
-    - tokenizer: '[\s\-\.]+'
   social:
     - type: youtube
       link: https://www.youtube.com/channel/UCiOupk9QF6jdk3EDKTHDykA
