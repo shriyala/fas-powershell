@@ -37,7 +37,7 @@ theme:
 
 plugins:
   - search:
-      separator: '[\s\-\.]+'
+      separator: [\s\-\.]+
   
 # Customization
 extra:
