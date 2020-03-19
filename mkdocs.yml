@@ -35,6 +35,9 @@ theme:
   favicon: /media/favicon.ico
   logo: https://developer-docs.citrix.com/_static/Citrix_Logo_Black.png
 
+plugins:
+  - search
+  
 # Customization
 extra:
   search:
