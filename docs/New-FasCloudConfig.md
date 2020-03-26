@@ -1,39 +1,48 @@
-# Get-FasUserCertificate
+# New-FasCloudConfig
 
 ## Synopsis
-List cached certificates on the Federated Authentication Service.
+Create the Federated Authentication Service (FAS) Cloud configuration.
 
 ## Syntax
 
 ```
-Get-FasUserCertificate [-UserPrincipalName <String>] [-Rule <String>] [-CertificateDefinition <String>]
- [-SecurityContext <String>] [-KeyInfo <Boolean>] [-MaximumRecordCount <Int>] [-Address <String>]
- [-UserName <String>] [-Password <String>] [<CommonParameters>]
+New-FasCloudConfig [-Rule <String>] [-SilentAuth] [-ClientId <String>] [-ClientSecret <String>]
+ [-Customer <String>] [-ResourceLocationId <String>] [-Address <String>] [-UserName <String>]
+ [-Password <String>] [<CommonParameters>]
 ```
 
 ## Description
-This command lists the user certificates managed by the Federated Authentication Service.
+FAS can be configured to accept identity assertions from Citrix Cloud Workspace.
+
+This cmdlet creates the Federated Authentication Service (FAS) Cloud configuration by opening a browser for the cloud administrator to authenticate and choose customer and resource location.
+It is also possible to authenticate silently (i.e.
+without a browser) using the -SilentAuth flag.
+
+The rule parameter specifies which rule is applied to identity assertions made by Citrix Cloud Workspace.
+
+Once configured with this cmdlet, FAS will attempt to register itself with Citrix Cloud.
+Use Get-FasCloudConfig to see the status.
 
 ## Examples
 
-### Example 1
+### EXAMPLE 1
 PS C:\\\>
 
 ```
 C:\PS> $CitrixFasAddress=(Get-FasServer)[0].Address
-C:\PS> Get-FasUserCertificate
+C:\PS> New-FasCloudConfig
 ```
 
 Description
 
------------
+===========
 
-This code lists all currently cached certificates on the Federated Authentication Service.
+This code creates the FAS cloud configuration.
 
 ## Parameters
 
-### -UserPrincipalName
-Filter by UPN on certificate.
+### -Rule
+Specify the rule applied to identity assertions made by Citrix Cloud Workspace
 
 ```yaml
 Type: String
@@ -44,11 +53,26 @@ Required: False
 Position: Named
 Default value: $NULL
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: True
+Accept wildcard characters: False
 ```
 
-### -Rule
-Filter by Rule name.
+### -SilentAuth
+Use silent authentication
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ClientId
+Specify the secure client id for silent authentication
 
 ```yaml
 Type: String
@@ -57,13 +81,13 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: (default)
+Default value: $NULL
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -CertificateDefinition
-Filter by Certificate Definition.
+### -ClientSecret
+Specify the secure client secret for silent authentication
 
 ```yaml
 Type: String
@@ -72,13 +96,13 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: (default)
+Default value: $NULL
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -SecurityContext
-Filter by Security Context.
+### -Customer
+Specify the cloud customer when using silent authentication
 
 ```yaml
 Type: String
@@ -87,43 +111,28 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: (default)
+Default value: $NULL
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -KeyInfo
-Include private key information in the returned data.
+### -ResourceLocationId
+Specify the resource location id when using silent authentication
 
 ```yaml
-Type: Boolean
+Type: String
 Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: Named
-Default value: $false
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -MaximumRecordCount
-Limit the number of certificates to return.
-
-```yaml
-Type: Int
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: 250
+Default value: $NULL
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
 ### -Address
-Address of FAS Server (or $NULL to use $CitrixFasAddress)
+Specify a particular FAS server to contact (or $NULL to use $CitrixFasAddress)
 
 ```yaml
 Type: String
@@ -132,7 +141,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: $CitrixFasAddress
+Default value: $NULL
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
@@ -178,14 +187,16 @@ This cmdlet does accept input from the pipeline but only by property name.
 ## Outputs
 
 ### void
-This cmdlet returns a list of FasUserCertificate object
+This cmdlet returns nothing
 
 ## Notes
 
 ## Related Links
 
-[New-FasUserCertificate]()
+[Get-FasCloudConfig]()
 
-[Remove-FasUserCertificate]()
+[Set-FasCloudConfig]()
+
+[Remove-FasCloudConfig]()
 
 

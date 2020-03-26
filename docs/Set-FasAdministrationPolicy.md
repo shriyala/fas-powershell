@@ -26,13 +26,13 @@ Description
 
 -----------
 
-This code will cause FAS cmdlets which take an optional Address parameter to default to localhost if no address is supplied.
+This code will cause FAS cmdlets which take an optional Address parameter to default to localhost if no address is supplied and $CitrixFasAddress is not set.
 If an address is supplied, FAS cmdlets will not check the address is present in the GPO.
 
 ## Parameters
 
 ### -DefaultToLocalhost
-Default to localhost.
+If $true, FAS cmdlets which take an optional Address parameter will default to localhost if no address is supplied and $CitrixFasAddress is not set.
 
 ```yaml
 Type: Boolean
@@ -41,13 +41,13 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: $NULL
+Default value: (no change)
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
 ### -CheckAddressAgainstGpo
-Check the address is present in the FAS GPO.
+If $true, FAS cmdlets which take an optional Address parameter will check the supplied address is present in the FAS GPO.
 
 ```yaml
 Type: Boolean
@@ -56,7 +56,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: $NULL
+Default value: (no change)
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```

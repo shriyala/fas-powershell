@@ -6,7 +6,7 @@ Identify the primary and failover Federated Authentication Server addresses for 
 ## Syntax
 
 ```
-Get-FasServerForUser [-UserPrincipalNames <String[]>] [<CommonParameters>]
+Get-FasServerForUser -UserPrincipalNames <String[]> [<CommonParameters>]
 ```
 
 ## Description
@@ -56,16 +56,16 @@ This enumerates the UPN addresses of users in "MyGroup" and looks up the FAS ser
 ### -UserPrincipalNames
 Array of UPNs (e.g.
 user@domain.com) for which to determine FAS addresses. 
-Note that the user accounts do not need to exist in the domain
+Note that the user accounts do not need to exist in the domain.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases:
 
-Required: False
+Required: True
 Position: Named
-Default value: $NULL
+Default value: (required)
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```

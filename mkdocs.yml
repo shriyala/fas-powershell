@@ -1,12 +1,12 @@
 # Project information
-site_name: Citrix Federated Authentication Service 1906 PowerShell cmdlets
-site_description: Citrix Federated Authentication Service 1906 PowerShell cmdlets Reference
+site_name: Citrix Federated Authentication Service 2003 PowerShell cmdlets
+site_description: Citrix Federated Authentication Service 2003 PowerShell cmdlets Reference
 site_title: Developer Docs
 site_url: https://developer-docs.citrix.com
 
 
 # Copyright
-copyright: 'Copyright &copy; 1999-2019 Citrix Systems, Inc. All rights reserved. '
+copyright: 'Copyright &copy; 1999-2020 Citrix Systems, Inc. All rights reserved. '
 
 extra_css:
   - 'assets/stylesheets/extra.css'
@@ -32,7 +32,7 @@ theme:
     primary: white
     accent: blue
   font: false
-  favicon: /media/favicon.ico
+  favicon: https://citrix.com/favicon.ico
   logo: https://developer-docs.citrix.com/_static/Citrix_Logo_Black.png
 
 plugins:
@@ -68,6 +68,7 @@ nav:
   - Get-FasAdministrationPolicy: Get-FasAdministrationPolicy.md
   - Get-FasAuthorizationCertificate: Get-FasAuthorizationCertificate.md
   - Get-FasCertificateDefinition: Get-FasCertificateDefinition.md
+  - Get-FasCloudConfig: Get-FasCloudConfig.md
   - Get-FasMsCertificateAuthority: Get-FasMsCertificateAuthority.md
   - Get-FasMsTemplate: Get-FasMsTemplate.md
   - Get-FasPolicyOid: Get-FasPolicyOid.md
@@ -80,6 +81,7 @@ nav:
   - New-FasAuthorizationCertificate: New-FasAuthorizationCertificate.md
   - New-FasAuthorizationCertificateRequest: New-FasAuthorizationCertificateRequest.md
   - New-FasCertificateDefinition: New-FasCertificateDefinition.md
+  - New-FasCloudConfig: New-FasCloudConfig.md
   - New-FasMsTemplate: New-FasMsTemplate.md
   - New-FasPolicyOid: New-FasPolicyOid.md
   - New-FasRule: New-FasRule.md
@@ -87,12 +89,14 @@ nav:
   - Publish-FasMsTemplate: Publish-FasMsTemplate.md
   - Remove-FasAuthorizationCertificate: Remove-FasAuthorizationCertificate.md
   - Remove-FasCertificateDefinition: Remove-FasCertificateDefinition.md
+  - Remove-FasCloudConfig: Remove-FasCloudConfig.md
   - Remove-FasMsTemplate: Remove-FasMsTemplate.md
   - Remove-FasPolicyOid: Remove-FasPolicyOid.md
   - Remove-FasRule: Remove-FasRule.md
   - Remove-FasUserCertificate: Remove-FasUserCertificate.md
   - Set-FasAdministrationPolicy: Set-FasAdministrationPolicy.md
   - Set-FasCertificateDefinition: Set-FasCertificateDefinition.md
+  - Set-FasCloudConfig: Set-FasCloudConfig.md
   - Set-FasPolicyOid: Set-FasPolicyOid.md
   - Set-FasRule: Set-FasRule.md
   - Set-FasServer: Set-FasServer.md

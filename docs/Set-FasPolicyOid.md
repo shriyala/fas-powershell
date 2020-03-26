@@ -6,7 +6,7 @@ Change the Universal Security Group associated with an Issuance Policy Oid regis
 ## Syntax
 
 ```
-Set-FasPolicyOid -Path <String> -Group <String> [<CommonParameters>]
+Set-FasPolicyOid -Path <String> [-Group <String>] [<CommonParameters>]
 ```
 
 ## Description
@@ -38,14 +38,14 @@ This code looks up the LDAP Path of the "Finance User Assurance" OID and sets th
 ## Parameters
 
 ### -Group
-Specifies the DN of a Universal Security Group to associate with this Policy OID (or leave $NULL)
+Specifies the DN of a Universal Security Group to associate with this Policy OID (or leave $NULL to disassociate)
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: $NULL
 Accept pipeline input: True (ByPropertyName)

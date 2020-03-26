@@ -10,13 +10,13 @@ Get-FasRule [-Name <String>] [-Address <String>] [-UserName <String>] [-Password
 ```
 
 ## Description
-Retrieve the configuration of existing rules configured on a FAS server.
+Retrieve the rules configured on a FAS server.
 
 Normally to log in to a Windows computer the Active Directory Domain Controllers require that "primary credentials" be present - that is a password, or a smartcard, etc. 
-An instance of a Federated Authentication Service allows trusted servers to "assert" user identities without knowledge of primary credentials. 
+A rule configuration on the Federated Authentication Service allows trusted servers to "assert" user identities without knowledge of primary credentials. 
 The configuration options are:
-    - The name of the Rule or Service instance. 
-Usually there will be at least one service named "default", but further, independent services can be run.
+    - The name of the Rule. 
+Usually there will be at least one rule named "default", but further, independent rules can configured.
     - A reference to the certificate definitions used to issue Virtual Smart Card certificates when user identities are asserted. 
 Note that only Certificate Definitions marked "InSession" can be used after the logon stage.
     - A reference to the Virtual Smart Card to use for log on. 
@@ -119,7 +119,7 @@ This cmdlet does accept input from the pipeline but only by property name.
 ## Outputs
 
 ### void
-This cmdlet does not return a value
+This cmdlet returns a list of rules
 
 ## Notes
 

@@ -1,13 +1,13 @@
 # New-FasRule
 
 ## Synopsis
-Create a Rule object (a named instance of the Federated Authentication Service running on a server).
+Create a Rule object (a named configuration of the Federated Authentication Service).
 
 ## Syntax
 
 ```
 New-FasRule -Name <String> -CertificateDefinitions <String[]> -StoreFrontAcl <String> [-UserAcl <String>]
- [-VdaAcl <String>] [-DelegatedAdministrationAcl <Boolean>] [-Address <String>] [-UserName <String>]
+ [-VdaAcl <String>] [-DelegatedAdministrationAcl <String>] [-Address <String>] [-UserName <String>]
  [-Password <String>] [<CommonParameters>]
 ```
 
@@ -15,10 +15,10 @@ New-FasRule -Name <String> -CertificateDefinitions <String[]> -StoreFrontAcl <St
 Create a named rule that controls which trusted StoreFront servers can assert logon identities.
 
 Normally to log in to a Windows computer the Active Directory Domain Controllers require that "primary credentials" be present - that is a password, or a smartcard, etc. 
-An instance of a Federated Authentication Service allows trusted servers to "assert" user identities without knowledge of primary credentials. 
+A rule configuration on the Federated Authentication Service allows trusted servers to "assert" user identities without knowledge of primary credentials. 
 The configuration options are:
-    - The name of the Rule or Service instance. 
-Usually there will be at least one service named "default", but further, independent services can be run.
+    - The name of the Rule. 
+Usually there will be at least one rule named "default", but further, independent rules can be configured.
     - A reference to the certificate definitions used to issue Virtual Smart Card certificates when user identities are asserted. 
 Note that only Certificate Definitions marked "InSession" can be used after the logon stage.
     - A reference to the Virtual Smart Card to use for log on. 
@@ -28,7 +28,7 @@ For security reasons, this must be chosen very carefully - usually it will be th
     - A list of Windows User Accounts that can be asserted. 
 Usually this will be restricted to a security group. 
 For example "ExternalCitrixUserGroup"
-    - A list of VDA Windows Accounts that can act as relying parties to log users in. 
+    - A list of VDA Windows Machine Accounts that can act as relying parties to log users in. 
 For example, "CitrixVdaMachines"
     - A list of administrators who have can modify (but not create or delete) the rule.
 
@@ -40,20 +40,22 @@ PS C:\\\>
 ```
 C:\PS> $CitrixFasAddress=(Get-FasServer)[0].Address
 C:\PS> $CertificateDefinition=(Get-FasCertificateDefinition)[0].name
-C:\PS> New-FasRule -Name "default" -CertificateDefinitions @($CertificateDefinition) -StoreFrontAcl D:P(A;OICI;CC;;;DD)
+C:\PS> New-FasRule -Name "default" -CertificateDefinitions @($CertificateDefinition) -StoreFrontAcl "O:BAG:DUD:P(A;OICI;CC;;;DD)"
 ```
 
 Description
 
 -----------
 
-This code generates a rule named "default" allowing Domain Controllers to assert identities by issuing certificates based on the first installed Certificate Definition
+This code creates a rule named "default" allowing Domain Controllers to assert identities by issuing certificates based on the first installed Certificate Definition.
+          
+Note: this is just an example; ordinarily you would grant permission to your StoreFront servers.
 
 ## Parameters
 
 ### -Name
 Specify the name of this rule. 
-Usually a rule named "default" would be available.
+Unless otherwise configured, StoreFront will use the rule named "default".
 
 ```yaml
 Type: String
@@ -62,7 +64,7 @@ Aliases:
 
 Required: True
 Position: Named
-Default value: (default)
+Default value: (required)
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
@@ -78,7 +80,7 @@ Aliases:
 
 Required: True
 Position: Named
-Default value: (default)
+Default value: (required)
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
@@ -86,7 +88,7 @@ Accept wildcard characters: False
 ### -StoreFrontAcl
 Specify the SDDL Security Descriptor controlling which servers are trusted to assert user identities using this rule. 
 E.g.
-"D:P(A;OICI;CC;;;XXXX)" replacing xxxx with a SID string.
+"O:BAG:DUD:P(A;OICI;CC;;;XXXX)" replacing xxxx with a SID string.
 
 ```yaml
 Type: String
@@ -95,7 +97,7 @@ Aliases:
 
 Required: True
 Position: Named
-Default value: (default)
+Default value: (required)
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
@@ -103,8 +105,8 @@ Accept wildcard characters: False
 ### -UserAcl
 Specify the SDDL Security Descriptor controlling which user identities can be asserted by this rule. 
 E.g.
-"D:P(A;OICI;LC;;;XXXX)" replacing xxxx with a SID string. 
-Defaults as "D:P(A;OICI;LC;;;DU)" for "Domain Users"
+"O:BAG:DUD:P(A;OICI;LC;;;XXXX)" replacing xxxx with a SID string. 
+Defaults as "O:BAG:DUD:P(A;OICI;LC;;;DU)" for "Domain Users"
 
 ```yaml
 Type: String
@@ -121,8 +123,8 @@ Accept wildcard characters: False
 ### -VdaAcl
 Specify the SDDL Security Descriptor controlling which VDAs can be logged into by this rule. 
 E.g.
-"D:P(A;OICI;DC;;;XXXX)" replacing xxxx with a SID string. 
-Defaults as "D:P(A;OICI;DC;;;DC)" for "Domain Computers"
+"O:BAG:DUD:P(A;OICI;DC;;;XXXX)" replacing xxxx with a SID string. 
+Defaults as "O:BAG:DUD:P(A;OICI;DC;;;DC)" for "Domain Computers"
 
 ```yaml
 Type: String
@@ -139,11 +141,11 @@ Accept wildcard characters: False
 ### -DelegatedAdministrationAcl
 Specify the SDDL Security Descriptor controlling which users can change the configuration of this rule. 
 E.g.
-"D:P(A;OICI;SW;;;XXXX)" replacing xxxx with a SID string. 
-Defaults as "D:P(A;OICI;SW;;;BA)" for "Built-in Administrators" on the FAS Server.
+"O:BAG:DUD:P(A;OICI;SW;;;XXXX)" replacing xxxx with a SID string. 
+Defaults as "O:BAG:DUD:P(A;OICI;SW;;;BA)" for "Built-in Administrators" on the FAS Server.
 
 ```yaml
-Type: Boolean
+Type: String
 Parameter Sets: (All)
 Aliases:
 

@@ -12,13 +12,13 @@ New-FasCertificateDefinition [-Name <String>] -CertificateTemplate <String> -Aut
 ```
 
 ## Description
-Create a Certificate Definition object that the FAS will use to generate types of certificate.
+Create a Certificate Definition object that FAS will use to generate user certificates.
 
-When generating a certificate, the FAS requires various pieces of information. 
+When generating a certificate, FAS requires various pieces of information. 
 Including:
     - The CertificateTemplate to request (see Get-FasMsTemplate)
     - A list of loadbalanced/failover Certificate Authority Addresses (see Get-FasMsCertificateAuthority)
-    - A reference to the AuthorizationCertificate to use to Authorize the request (see Get-FasAuthorizationCertificate)
+    - The id of the AuthorizationCertificate to use to Authorize the request (see Get-FasAuthorizationCertificate)
     - A list of additional Issuance Policy OIDs to add to the certificate request (see Get-FasPolicyOid)
     - A flag indicating if the certificate can be used as an in-session Virtual Smart Card, or only for the logon process.
 
@@ -69,13 +69,13 @@ Aliases:
 
 Required: True
 Position: Named
-Default value: (default)
+Default value: (required)
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
 ### -AuthorizationCertificate
-Specify a the Guid Id of an AuthorizationCertificate object
+Specify the Id of an AuthorizationCertificate object
 
 ```yaml
 Type: String
@@ -84,7 +84,7 @@ Aliases:
 
 Required: True
 Position: Named
-Default value: (default)
+Default value: (required)
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
@@ -99,7 +99,7 @@ Aliases:
 
 Required: True
 Position: Named
-Default value: (default)
+Default value: (required)
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```

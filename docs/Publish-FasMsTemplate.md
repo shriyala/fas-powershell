@@ -36,7 +36,7 @@ Description
 
 -----------
 
-Publishes the Citrix_SmartcardLogon template on the certificate authority on dc.citrixtest.net
+Publishes the Citrix_SmartcardLogon template on the default certificate authority
 
 ## Parameters
 

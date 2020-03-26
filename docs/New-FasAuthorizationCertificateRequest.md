@@ -12,13 +12,13 @@ New-FasAuthorizationCertificateRequest [-DistinguishedName <String>] [-UseTPM <B
 ```
 
 ## Description
-Generate an offline certificate request a Registration Authority (or Enrollment Agent) certificate for a Federated Authentication Service. 
+Generate an offline certificate request for a Registration Authority (or Enrollment Agent) certificate for a Federated Authentication Service. 
 Once the request is signed import the PKCS7 chain using Import-FasAuthorizationCertificateResponse.
 
 The Federated Authentication Service works by dynamically issuing user logon certificates from a Microsoft Certificate Authority. 
 To do this it must first be granted an "Authorization Certificate" (often called an RA or Enrollement Agent certificate) to authenticate to the Certificate Authority.
 
-This command generates a Certifiate Request associated it with an FasAuthorizationCertificate and returns a Base64 CSR.
+This command generates a Certifiate Request and returns a Base64 CSR.
 
 ## Examples
 
@@ -126,7 +126,7 @@ This cmdlet does accept input from the pipeline but only by property name.
 ## Outputs
 
 ### void
-This cmdlet does not return a value
+This cmdlet returns a Base64 certificate request
 
 ## Notes
 
