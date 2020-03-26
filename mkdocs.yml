@@ -6,7 +6,7 @@ site_url: https://developer-docs.citrix.com
 
 
 # Copyright
-copyright: 'Copyright &copy; 1999-2019 Citrix Systems, Inc. All rights reserved. '
+copyright: 'Copyright &copy; 1999-2020 Citrix Systems, Inc. All rights reserved. '
 
 extra_css:
   - 'assets/stylesheets/extra.css'
@@ -32,7 +32,7 @@ theme:
     primary: white
     accent: blue
   font: false
-  favicon: /media/favicon.ico
+  favicon: https://citrix.com/favicon.ico
   logo: https://developer-docs.citrix.com/_static/Citrix_Logo_Black.png
 
 # Customization
@@ -58,8 +58,6 @@ markdown_extensions:
 
 # Page tree
 nav:
-- Versions: 
-    - 1906: https://developer-docs.citrix.com/projects/federated-authentication-service-powershell-cmdlets/en/1906/
 - Citrix Federated Authentication Service PowerShell cmdlets:
     - Introduction: index.md
 - cmdlets reference:
