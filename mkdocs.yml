@@ -38,13 +38,13 @@ theme:
 # Customization
 extra:
   social:
-    - type: youtube
+    - icon: fontawesome/brands/youtube
       link: https://www.youtube.com/channel/UCiOupk9QF6jdk3EDKTHDykA
-    - type: github-alt
+    - icon: fontawesome/brands/github-alt
       link: https://github.com/citrix
-    - type: twitter
+    - icon: fontawesome/brands/twitter
       link: https://twitter.com/citrixdeveloper
-    - type: linkedin
+    - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/company/citrix/
 
 markdown_extensions:
@@ -55,6 +55,9 @@ markdown_extensions:
   - footnotes
   - meta
   - extra
+
+plugins:
+  - search
 
 # Page tree
 nav:
