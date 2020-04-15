@@ -26,8 +26,8 @@ theme:
 
   # Default values, taken from mkdocs_theme.yml
   language: en
-  feature:
-    tabs: false
+  features:
+    - tabs: false
   palette:
     primary: white
     accent: blue
@@ -49,15 +49,14 @@ extra:
 
 markdown_extensions:
   - admonition
-  - codehilite
+  - codehilite:
+      guess_lang: false
   - toc:
       permalink: true
-  - footnotes
-  - meta
-  - extra
 
 plugins:
-  - search
+  - search:
+      separator: '[\s\-\.]+'
 
 # Page tree
 nav:
