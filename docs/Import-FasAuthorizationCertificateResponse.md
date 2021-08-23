@@ -63,7 +63,7 @@ Required: True
 Position: Named
 Default value: (required)
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: True
+Accept wildcard characters: False
 ```
 
 ### -Address
