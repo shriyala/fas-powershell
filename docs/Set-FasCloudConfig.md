@@ -17,7 +17,7 @@ This cmdlet changes the Federated Authentication Service (FAS) Cloud configurati
 
 ## Examples
 
-### EXAMPLE 1
+### ========================== EXAMPLE 1 ==========================
 PS C:\\\>
 
 ```

@@ -1,6 +1,6 @@
 # Project information
-site_name: Citrix Federated Authentication Service 2003 PowerShell cmdlets
-site_description: Citrix Federated Authentication Service 2003 PowerShell cmdlets Reference
+site_name: Citrix Federated Authentication Service 2109 PowerShell cmdlets
+site_description: Citrix Federated Authentication Service 2109 PowerShell cmdlets Reference
 site_title: Developer Docs
 site_url: https://developer-docs.citrix.com
 
@@ -75,6 +75,8 @@ nav:
   - Get-FasAuthorizationCertificate: Get-FasAuthorizationCertificate.md
   - Get-FasCertificateDefinition: Get-FasCertificateDefinition.md
   - Get-FasCloudConfig: Get-FasCloudConfig.md
+  - Get-FasCloudInfo: Get-FasCloudInfo.md
+  - Get-FasCloudKeyInfo: Get-FasCloudKeyInfo.md
   - Get-FasMsCertificateAuthority: Get-FasMsCertificateAuthority.md
   - Get-FasMsTemplate: Get-FasMsTemplate.md
   - Get-FasPolicyOid: Get-FasPolicyOid.md

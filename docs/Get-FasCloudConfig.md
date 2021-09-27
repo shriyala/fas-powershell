@@ -16,7 +16,7 @@ This cmdlet returns information about the Federated Authentication Service (FAS)
 
 ## Examples
 
-### EXAMPLE 1
+### ========================== EXAMPLE 1 ==========================
 PS C:\\\>
 
 ```
@@ -93,6 +93,8 @@ This cmdlet returns the cloud configuration
 ## Notes
 
 ## Related Links
+
+[Get-FasCloudKeyInfo]()
 
 [Set-FasCloudConfig]()
 

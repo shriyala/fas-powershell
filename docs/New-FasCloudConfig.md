@@ -6,9 +6,9 @@ Create the Federated Authentication Service (FAS) Cloud configuration.
 ## Syntax
 
 ```
-New-FasCloudConfig [-Rule <String>] [-SilentAuth] [-ClientId <String>] [-ClientSecret <String>]
- [-Customer <String>] [-ResourceLocationId <String>] [-Address <String>] [-UserName <String>]
- [-Password <String>] [<CommonParameters>]
+New-FasCloudConfig [-Rule <String>] [-CloudId <String>] [-SilentAuth] [-ClientId <String>]
+ [-ClientSecret <String>] [-Customer <String>] [-ResourceLocationId <String>] [-Address <String>]
+ [-UserName <String>] [-Password <String>] [<CommonParameters>]
 ```
 
 ## Description
@@ -25,7 +25,7 @@ Use Get-FasCloudConfig to see the status.
 
 ## Examples
 
-### EXAMPLE 1
+### ========================== EXAMPLE 1 ==========================
 PS C:\\\>
 
 ```
@@ -43,6 +43,23 @@ This code creates the FAS cloud configuration.
 
 ### -Rule
 Specify the rule applied to identity assertions made by Citrix Cloud Workspace
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: $NULL
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -CloudId
+Specify the id of the cloud to connect to.
+Use Get-FasCloudInfo to find supported cloud ids.
+If not specified, connects to Citrix Cloud.
 
 ```yaml
 Type: String
@@ -198,5 +215,7 @@ This cmdlet returns nothing
 [Set-FasCloudConfig]()
 
 [Remove-FasCloudConfig]()
+
+[Get-FasCloudInfo]()
 
 
