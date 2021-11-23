@@ -1,4 +1,4 @@
-# Citrix Federated Authentication Service 2109 PowerShell cmdlets
+# Citrix Federated Authentication Service 2112 PowerShell cmdlets
 
 Citrix Federated Authentication Service provides various Microsoft Windows PowerShell cmdlets in a PowerShell snapin. These cmdlets allow you to perform advanced configuration functions.
 
@@ -28,6 +28,7 @@ Start a shell in PowerShell.
 - [Get-FasMsTemplate](Get-FasMsTemplate.md)
 - [Get-FasPolicyOid](Get-FasPolicyOid.md)
 - [Get-FasPrivateKeyPoolInfo](Get-FasPrivateKeyPoolInfo.md)
+- [Get-FasRaCertificateMonitor](Get-FasRaCertificateMonitor.md)
 - [Get-FasRule](Get-FasRule.md)
 - [Get-FasServer](Get-FasServer.md)
 - [Get-FasServerForUser](Get-FasServerForUser.md)
@@ -49,10 +50,12 @@ Start a shell in PowerShell.
 - [Remove-FasPolicyOid](Remove-FasPolicyOid.md)
 - [Remove-FasRule](Remove-FasRule.md)
 - [Remove-FasUserCertificate](Remove-FasUserCertificate.md)
+- [Reset-FasRaCertificateMonitor](Reset-FasRaCertificateMonitor.md)
 - [Set-FasAdministrationPolicy](Set-FasAdministrationPolicy.md)
 - [Set-FasCertificateDefinition](Set-FasCertificateDefinition.md)
 - [Set-FasCloudConfig](Set-FasCloudConfig.md)
 - [Set-FasPolicyOid](Set-FasPolicyOid.md)
+- [Set-FasRaCertificateMonitor](Set-FasRaCertificateMonitor.md)
 - [Set-FasRule](Set-FasRule.md)
 - [Set-FasServer](Set-FasServer.md)
 - [Test-FasCertificateSigningRequest](Test-FasCertificateSigningRequest.md)
