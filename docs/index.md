@@ -18,12 +18,15 @@ Start a shell in PowerShell.
 
 ## Cmdlets
 
+- [Complete-FasCloudRegistration](Complete-FasCloudRegistration.md)
 - [Get-FasAdministrationPolicy](Get-FasAdministrationPolicy.md)
 - [Get-FasAuthorizationCertificate](Get-FasAuthorizationCertificate.md)
 - [Get-FasCertificateDefinition](Get-FasCertificateDefinition.md)
 - [Get-FasCloudConfig](Get-FasCloudConfig.md)
 - [Get-FasCloudInfo](Get-FasCloudInfo.md)
 - [Get-FasCloudKeyInfo](Get-FasCloudKeyInfo.md)
+- [Get-FasCloudRegistrationCloudInfo](Get-FasCloudRegistrationCloudInfo.md)
+- [Get-FasCloudRegistrationStatus](Get-FasCloudRegistrationStatus.md)
 - [Get-FasMsCertificateAuthority](Get-FasMsCertificateAuthority.md)
 - [Get-FasMsTemplate](Get-FasMsTemplate.md)
 - [Get-FasPolicyOid](Get-FasPolicyOid.md)
@@ -38,6 +41,7 @@ Start a shell in PowerShell.
 - [New-FasAuthorizationCertificateRequest](New-FasAuthorizationCertificateRequest.md)
 - [New-FasCertificateDefinition](New-FasCertificateDefinition.md)
 - [New-FasCloudConfig](New-FasCloudConfig.md)
+- [New-FasCloudRegistration](New-FasCloudRegistration.md)
 - [New-FasMsTemplate](New-FasMsTemplate.md)
 - [New-FasPolicyOid](New-FasPolicyOid.md)
 - [New-FasRule](New-FasRule.md)
@@ -50,6 +54,7 @@ Start a shell in PowerShell.
 - [Remove-FasPolicyOid](Remove-FasPolicyOid.md)
 - [Remove-FasRule](Remove-FasRule.md)
 - [Remove-FasUserCertificate](Remove-FasUserCertificate.md)
+- [Request-FasCloudRegistration](Request-FasCloudRegistration.md)
 - [Reset-FasRaCertificateMonitor](Reset-FasRaCertificateMonitor.md)
 - [Set-FasAdministrationPolicy](Set-FasAdministrationPolicy.md)
 - [Set-FasCertificateDefinition](Set-FasCertificateDefinition.md)
