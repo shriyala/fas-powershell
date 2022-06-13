@@ -1,4 +1,4 @@
-# Citrix Federated Authentication Service 2112 PowerShell cmdlets
+# Citrix Federated Authentication Service 2206 PowerShell cmdlets
 
 Citrix Federated Authentication Service provides various Microsoft Windows PowerShell cmdlets in a PowerShell snapin. These cmdlets allow you to perform advanced configuration functions.
 
